@@ -16,24 +16,6 @@
   <meta charset="utf-8">
   <!--prime:bb8d17b8-->
   <title>Project4 - Lineage 2</title>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Detect if the site is being run locally (file:// protocol)
-        const isLocal = window.location.protocol === "file:";
-        const baseURL = isLocal ? "" : "https://L2project4.com/";
-
-        // Select all anchor tags on the page
-        const anchorTags = document.querySelectorAll('a') || document.querySelectorAll('link');
-
-        // Loop through all the anchor tags and adjust the href
-        anchorTags.forEach(anchor => {
-            // If the href doesn't start with 'http' or 'https', prepend the base URL
-            if (anchor.getAttribute('href') && !anchor.getAttribute('href').startsWith('http')) {
-                anchor.setAttribute('href', baseURL + anchor.getAttribute('href'));
-            }
-        });
-    });
-  </script>
   <meta property="og:title" content="Project4 - Lineage 2">
   <meta property="og:site_name" content="L2Project4" >
   <meta property="robots" content="index,follow" >

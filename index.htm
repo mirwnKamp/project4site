@@ -15,24 +15,6 @@
   <meta charset="utf-8">
   <!--prime:bb8d17b8-->
   <title>Project4 - Lineage 2</title>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Detect if the site is being run locally (file:// protocol)
-        const isLocal = window.location.protocol === "file:";
-        const baseURL = isLocal ? "" : "https://L2project4.com/";
-
-        // Select all anchor tags on the page
-        const anchorTags = document.querySelectorAll('a') || document.querySelectorAll('link');
-
-        // Loop through all the anchor tags and adjust the href
-        anchorTags.forEach(anchor => {
-            // If the href doesn't start with 'http' or 'https', prepend the base URL
-            if (anchor.getAttribute('href') && !anchor.getAttribute('href').startsWith('http')) {
-                anchor.setAttribute('href', baseURL + anchor.getAttribute('href'));
-            }
-        });
-    });
-  </script>
   <meta property="og:title" content="Project4 - Lineage 2">
   <meta property="og:site_name" content="L2Project4" >
   <meta property="robots" content="index,follow" >
@@ -52,10 +34,10 @@
   <meta name="viewport" content="width=device-width" >
   <link rel="shortcut icon" href="main-page\4only.png" >
   <link rel="icon" href="main-page\4only.png" >
-  <link rel="stylesheet" href="scripts\main.css" >
-  <link rel="stylesheet" href="scripts\swiper.css" >
+  <link rel="stylesheet" href="https://predator.ge/css/main.css" >
+  <link rel="stylesheet" href="https://predator.ge/libs/swiper/swiper.css" >
   <link rel="apple-touch-icon" sizes="256x256" href="main-page\4only.png" >
-  <link rel="stylesheet" href="scripts\top.css" >
+  <link rel="stylesheet" href="https://predator.ge/css/top.css">
   <style>
      .preload {
      background-color: #1d1a19;
