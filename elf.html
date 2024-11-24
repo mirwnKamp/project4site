@@ -15,29 +15,11 @@
   <meta charset="utf-8">
   <!--prime:bb8d17b8-->
   <title>Project4 - Lineage 2</title>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Detect if the site is being run locally (file:// protocol)
-        const isLocal = window.location.protocol === "file:";
-        const baseURL = isLocal ? "" : "https://L2project4.com/";
-
-        // Select all anchor tags on the page
-        const anchorTags = document.querySelectorAll('a') || document.querySelectorAll('link');
-
-        // Loop through all the anchor tags and adjust the href
-        anchorTags.forEach(anchor => {
-            // If the href doesn't start with 'http' or 'https', prepend the base URL
-            if (anchor.getAttribute('href') && !anchor.getAttribute('href').startsWith('http')) {
-                anchor.setAttribute('href', baseURL + anchor.getAttribute('href'));
-            }
-        });
-    });
-  </script>
   <meta property="og:title" content="Project4 - Lineage 2">
   <meta property="og:site_name" content="L2Project4" >
   <meta property="robots" content="index,follow" >
   <meta property="og:type" content="website" >
-  <meta property="og:url" content="index.htm" >
+  <meta property="og:url" content="index.html" >
   <meta name="description" content= "L2 Project4." >
   <meta property="og:description" content="Project4 - Lineage 2, the highest quality gameplay." >
   <meta property="twitter:description" content="Project4 - highest quality Lineage 2 Private server." >
@@ -52,10 +34,10 @@
   <meta name="viewport" content="width=device-width" >
   <link rel="shortcut icon" href="main-page\4only.png" >
   <link rel="icon" href="main-page\4only.png" >
-  <link rel="stylesheet" href="scripts\main.css" >
-  <link rel="stylesheet" href="scripts\swiper.css" >
+  <link rel="stylesheet" href="https://predator.ge/css/main.css" >
+  <link rel="stylesheet" href="https://predator.ge/libs/swiper/swiper.css" >
   <link rel="apple-touch-icon" sizes="256x256" href="main-page\4only.png" >
-  <link rel="stylesheet" href="scripts\top.css" >
+  <link rel="stylesheet" href="https://predator.ge/css/top.css">
   <style>
      .preload {
      background-color: #1d1a19;
@@ -100,13 +82,13 @@ theme_color="#3b5998"></div>
       <div class="wrapper">
         <header class="header">
           <nav class="nav">
-            <div class="flex-sc content-area"><a href="index.htm" class="flex-cc nav__logo"><img alt="" src="main-page\4only.png"></a> 
+            <div class="flex-sc content-area"><a href="index.html" class="flex-cc nav__logo"><img alt="" src="main-page\4only.png"></a> 
               <div class="flex-sc nav__links">
-                  <div class="flex-cc nav__links-item"><a href="index.htm">home</a></div>
-                <div class="flex-cc nav__links-item"><a href="wiki.htm">WIKI</a></div>
-				 <div class="flex-cc nav__links-item"><a href="class.htm">GAMEPLAY</a></div>
-				  <div class="flex-cc nav__links-item"><a href="items.htm">ITEMS</a></div>
-                <div class="flex-cc nav__links-item"><a href="startgame.htm">START GAME</a></div>
+                 <div class="flex-cc nav__links-item"><a href="index.html">home</a></div>
+                <div class="flex-cc nav__links-item"><a href="wiki.html">WIKI</a></div>
+				 <div class="flex-cc nav__links-item"><a href="class.html">GAMEPLAY</a></div>
+				  <div class="flex-cc nav__links-item"><a href="items.html">ITEMS</a></div>
+                <div class="flex-cc nav__links-item"><a href="startgame.html">START GAME</a></div>
                 <div class="flex-cc nav__links-item"><a href="https://discord.gg/jG8GzyqGMy">DISCORD</a></div>
 				<div class="flex-cc nav__links-item"><a href="Vote Links here">VOTE FOR US</a></div>
               </div>
@@ -124,7 +106,7 @@ theme_color="#3b5998"></div>
             </div>
 			<div class="nav__langs-items flex-ss">
            
-            <a hreflang="en" href="index.htm" class="flex-sc">
+            <a hreflang="en" href="index.html" class="flex-sc">
             <div class="nav__langs-items-icon flex-cc"><img src="main-page\en.webp" alt=""></div>
             <div class="nav__langs-items-name">English</div>
             </a>
@@ -136,12 +118,12 @@ theme_color="#3b5998"></div>
                 <div class="nav__open-links-item"></div>
               </div>
             </div>
-            <div class="banners" style="position: relative; z-index: 99999; float: right;"></div>
+            <div class="banners" style="position: realative; z-index: 99999;float:right"></div>
           </nav>
           <div class="flex-cc header__box">
             <div class="header__content">
               <div class="flex-cc header__content-logo">
-                <div class="header__content-logo-left"></div><a href="index.htm" class="flex-cc header__content-logo-center"><img alt="" src="main-page\p4.png"></a>
+                <div class="header__content-logo-left"></div><a href="index.html" class="flex-cc header__content-logo-center"><img alt="" src="main-page\p4.png"></a>
                 <div class="header__content-logo-right"></div>
               </div>
               <div class="header__content-promo">
@@ -166,24 +148,24 @@ theme_color="#3b5998"></div>
 				<div class="section__title-left"></div>
 				<div class="section__title-center">
 					<div style="display: flex; gap: 10px; justify-content: center;">
-     <a href="class.htm" style="text-decoration: none;">
+     <a href="class.html" style="text-decoration: none;">
 	<button style="background: linear-gradient(135deg, #333, #1a1a1a); color: white; border: 2px solid #ff9933; padding: 15px 35px; width: 170px; text-align: center; cursor: pointer; font-size: 22px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: all 0.3s ease; font-family: 'Arial', sans-serif;">
 	Human
     </button>
-	<a href="elf.htm" style="text-decoration: none;">
+	<a href="elf.html" style="text-decoration: none;">
 	<button style="background: linear-gradient(135deg, #333, #1a1a1a); color: white; border: 2px solid #ff9933; padding: 15px 35px; width: 170px; text-align: center; cursor: pointer; font-size: 22px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: all 0.3s ease; font-family: 'Arial', sans-serif;">
     Elf
     </button>
-	<a href="darkElf.htm" style="text-decoration: none;">
+	<a href="darkElf.html" style="text-decoration: none;">
 	<button style="background: linear-gradient(135deg, #333, #1a1a1a); color: white; border: 2px solid #ff9933; padding: 15px 35px; width: 170px; text-align: center; cursor: pointer; font-size: 22px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: all 0.3s ease; font-family: 'Arial', sans-serif;">
         Dark Elf
     </button>
-		<a href="orc.htm" style="text-decoration: none;">
+		<a href="orc.html" style="text-decoration: none;">
 
 	<button style="background: linear-gradient(135deg, #333, #1a1a1a); color: white; border: 2px solid #ff9933; padding: 15px 35px; width: 170px; text-align: center; cursor: pointer; font-size: 22px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: all 0.3s ease; font-family: 'Arial', sans-serif;">
         Orc
     </button>
-		<a href="dwarf.htm" style="text-decoration: none;">
+		<a href="dwarf.html" style="text-decoration: none;">
 	<button style="background: linear-gradient(135deg, #333, #1a1a1a); color: white; border: 2px solid #ff9933; padding: 15px 35px; width: 170px; text-align: center; cursor: pointer; font-size: 22px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: all 0.3s ease; font-family: 'Arial', sans-serif;">
         Dwarf
     </button>
@@ -197,54 +179,54 @@ theme_color="#3b5998"></div>
 				<div class="wiki flex-sbs">
 				
 					<div class="wiki__nav">
-						<a href="#" class="wiki__nav-item flex-sc" data-open-tab="Shillientemplar">
+						<a href="#" class="wiki__nav-item flex-sc" data-open-tab="Evastemplar">
 							<div class="wiki__nav-item-icon flex-cc"><i class="ra ra-dervish-swords"></i></div>
 							<div class="wiki__nav-item-info">
-								<div class="wiki__nav-item-name">Shillien Templar</div>
-								<div class="wiki__nav-item-desc">Shillien Templar New Description of skills</div>
+								<div class="wiki__nav-item-name">Evas Templar</div>
+								<div class="wiki__nav-item-desc">Evas Templar New Description of skills</div>
 							</div>
 						</a>
-						<a href="#" class="wiki__nav-item flex-sc" data-open-tab="Spectraldancer">
+						<a href="#" class="wiki__nav-item flex-sc" data-open-tab="Swordmuse">
 							<div class="wiki__nav-item-icon flex-cc"><i class="ra ra-scroll-unfurled"></i></div>
 							<div class="wiki__nav-item-info">
-								<div class="wiki__nav-item-name">Spectral Dancer</div>
-								<div class="wiki__nav-item-desc">Spectral Dancer New Description of skills</div>
+								<div class="wiki__nav-item-name">Swordmuse</div>
+								<div class="wiki__nav-item-desc">Swordmuse New Description of skills</div>
 							</div>
 						</a>
-						<a href="#" class="wiki__nav-item flex-sc" data-open-tab="Ghosthunter">
+						<a href="#" class="wiki__nav-item flex-sc" data-open-tab="Windrider">
 							<div class="wiki__nav-item-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
 							<div class="wiki__nav-item-info">
-								<div class="wiki__nav-item-name">Ghost Hunter</div>
-								<div class="wiki__nav-item-desc">Ghost Hunter New Description of skills</div>
+								<div class="wiki__nav-item-name">Wind Rider</div>
+								<div class="wiki__nav-item-desc">Wind Rider New Description of skills</div>
 							</div>
 						</a>
-						<a href="#" class="wiki__nav-item flex-sc" data-open-tab="Ghostsentinel">
+						<a href="#" class="wiki__nav-item flex-sc" data-open-tab="Moonlightsentinel">
 							<div class="wiki__nav-item-icon flex-cc"><i class="ra ra-perspective-dice-random"></i></div>
 							<div class="wiki__nav-item-info">
-								<div class="wiki__nav-item-name">Ghost Sentinel</div>
-								<div class="wiki__nav-item-desc">Ghost Sentinel New Description of skills</div>
+								<div class="wiki__nav-item-name">Moonlight Sentinel</div>
+								<div class="wiki__nav-item-desc">Moonlight Sentinel New Description of skills</div>
 							</div>
 						</a>
 						
-						<a href="#" class="wiki__nav-item flex-sc" data-open-tab="Stormscreamer">
+						<a href="#" class="wiki__nav-item flex-sc" data-open-tab="Mysticmuse">
 							<div class="wiki__nav-item-icon flex-cc"><i class="ra ra-feather-wing"></i></div>
 							<div class="wiki__nav-item-info">
-								<div class="wiki__nav-item-name">Storm Screamer</div>
-								<div class="wiki__nav-item-desc">Storm Screamer New Description of skills</div>
+								<div class="wiki__nav-item-name">Mystic Muse</div>
+								<div class="wiki__nav-item-desc">Mystic Muse New Description of skills</div>
 							</div>
 						</a>
-						<a href="#" class="wiki__nav-item flex-sc" data-open-tab="Shilliensaint">
+						<a href="#" class="wiki__nav-item flex-sc" data-open-tab="Evassaint">
 							<div class="wiki__nav-item-icon flex-cc"><i class="ra ra-underhand"></i></div>
 							<div class="wiki__nav-item-info">
-								<div class="wiki__nav-item-name">Shillien Saint</div>
-								<div class="wiki__nav-item-desc">Shillien Saint New Description of skills</div>
+								<div class="wiki__nav-item-name">Evas Saint</div>
+								<div class="wiki__nav-item-desc">Evas Saint New Description of skills</div>
 							</div>
 						</a>
-						<a href="#" class="wiki__nav-item flex-sc" data-open-tab="Spectralmaster">
+						<a href="#" class="wiki__nav-item flex-sc" data-open-tab="Elementalmaster">
 							<div class="wiki__nav-item-icon flex-cc"><i class="ra ra-gold-bar"></i></div>
 							<div class="wiki__nav-item-info">
-								<div class="wiki__nav-item-name">Spectral Master</div>
-								<div class="wiki__nav-item-desc">Spectral Master New Description of skills</div>
+								<div class="wiki__nav-item-name">Elemental Master</div>
+								<div class="wiki__nav-item-desc">Elemental Master New Description of skills</div>
 							</div>
 						</a>
 						
@@ -252,12 +234,12 @@ theme_color="#3b5998"></div>
 					</div>
 					<div class="wiki__box">
 						
-						<div class="wiki__content" data-name-tab="Shillientemplar">
+<div class="wiki__content" data-name-tab="Evastemplar">
 							<div class="wiki__content-title flex-sc">
 								<div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
 								<div class="wiki__content-title-info">
-									<div class="wiki__content-title-name">Shillien Templar</div>
-									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;"> is a fierce tank class that harnesses the power of darkness to protect their allies. Combining high defense with offensive dark magic, they can absorb damage, taunt enemies, and unleash powerful debuffs to weaken their foes. Their defensive abilities and crowd control make them an essential frontline protector, excelling in both PvP and PvE environments, where they shield their team while dealing steady damage.</div>
+									<div class="wiki__content-title-name">Evas Templar</div>
+									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">is a defensive powerhouse, specializing in protecting allies with a combination of high durability and defensive abilities. As a shield-wielding tank, they excel at absorbing damage, using powerful auras and self-healing skills to endure even the most relentless assaults. What sets them apart is their ability to enhance their party's survivability with healing effects and defensive buffs, making them an essential protector in any group. Eva's Templar is not only a formidable wall against enemies but also a vital support class, offering both defense and restoration on the battlefield.</div>
 								</div>
 								
 							</div>
@@ -269,11 +251,20 @@ theme_color="#3b5998"></div>
             <p style="margin: 0;">Swing a chain to pull the target to you.Requires sword or blunt weapon.</p>
         </div>
     </div>
+    
     <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\shillien-templar\freeze.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <img src="class-page\human\paladin\chainhydra.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Freezing Strike:</span>
-            <p style="margin: 0;">Freezing Strike have been reworked. Freezes the surrounding air inflicting water damage on the enemy, decreasing their speed -20% for 20second. This is a very fast skill.</p>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Chain Hydra:</span>
+            <p style="margin: 0;">Throws chain and pulls target to you and provokes nearby enemies to attack you.Requires a shield.</p>
+        </div>
+    </div>
+
+    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\elf\evas-templar\entagle.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Entangle:</span>
+            <p style="margin: 0;">Entangle have been reworked. For 20sec. The enemy's Speed -30%. This is a very fast skill.</p>
         </div>
     </div>
 	 <div style="display: flex; align-items: center; margin-bottom: 15px;">
@@ -290,13 +281,7 @@ theme_color="#3b5998"></div>
             <p style="margin: 0;">For 8 sec, Transfers magical damage back to the enemy caster.</p>
         </div>
     </div>
-    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\shillien-templar\mass.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Mass Lightning Strike:</span>
-            <p style="margin: 0;">Summons a dark lightning that strikes the target and nearby enemies paralyzing them for 5 sec. Requires sword or blunt weapon.</p>
-        </div>
-    </div>
+    
     <div style="display: flex; align-items: center; margin-bottom: 15px;">
         <img src="class-page\elf\evas-templar\bash.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
@@ -304,7 +289,13 @@ theme_color="#3b5998"></div>
             <p style="margin: 0;">Shield Bash have been reworked. Inflicts stun on the target for 4sec, and cancels enemy's target. Requires a shield.</p>
         </div>
     </div>
-
+	<div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\elf\evas-templar\eva.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Touch of Eva:</span>
+            <p style="margin: 0;">Recover's 50% HP for all party members. For 1min Buff Cancel Resistance +100%, Debuff Resistance +30%, Healing Power +30%. Recovers 50 Hp per sec. This skill have fixed cooldown, Requires a shield.</p>
+        </div>
+    </div>
     <div style="display: flex; align-items: center; margin-bottom: 15px;">
         <img src="class-page\elf\evas-templar\mirror.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
@@ -313,16 +304,16 @@ theme_color="#3b5998"></div>
         </div>
     </div>
 	 <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\shillien-templar\aura.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <img src="class-page\elf\evas-templar\aura.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Templar's Aura:</span>
-            <p style="margin: 0;">For you and your party members P./M. Attack +10%, P./M. Def +20%, speed +10 & P./M. Skill Cooldown -7%. Only one aura can be active at any time.</p>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Guardian's Aura:</span>
+            <p style="margin: 0;">For you and your party members, P./M. Def +20%, Speed +10, Attribute resistance +100, recieved P./M. Critical Damage -15%, P./M. Skill cooldown -7% and Skill Mp Consumption -15%.</p>
         </div>
     </div>
 	 <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\shillien-templar\cubic.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <img src="class-page\elf\evas-templar\cubic.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Shillien Templar Cubics:</span>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Eva's Templar Cubics:</span>
             <p style="margin: 0;">All cubics have been reworked and boosted.</p>
         </div>
     </div>
@@ -335,50 +326,51 @@ theme_color="#3b5998"></div>
     </div>
 </div>
 	</div>			
-<div class="wiki__content" data-name-tab="Spectraldancer">
-						<div class="wiki__content-title flex-sc">
+						
+<div class="wiki__content" data-name-tab="Swordmuse">
+							<div class="wiki__content-title flex-sc">
 								<div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
 								<div class="wiki__content-title-info">
-									<div class="wiki__content-title-name">Spectral Dancer</div>
-									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;"> enchants their allies with dark and powerful dances, increasing their combat effectiveness while weakening their enemies. Their dance skills provide a variety of buffs that enhance attack speed, critical chances, and overall damage for their party. Spectral Dancers also excel in melee combat, delivering strong blows while supporting their team, making them indispensable in large-scale battles.</div>
+									<div class="wiki__content-title-name">Sword Muse</div>
+									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;"> is a versatile support class, blending melee combat with powerful songs that enhance the strength and resilience of their party. Their role extends beyond dealing damage, as they empower allies with buffs that increase offensive capabilities, speed, and defense, turning the tide of battle in their favor. With a unique ability to inspire and uplift, the Sword Muse excels in both PvE and PvP, making them indispensable in group play. Their combination of combat prowess and group support ensures their place as both a front-line fighter and a strategic enabler.</div>
 								</div>
 								
 							</div>
 <div style="font-family: 'Arial', sans-serif; font-size: 18px; line-height: 1.6; color: #fff;">
     <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\spectral-dancer\cripl.png" alt="Chain Strike Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <img src="class-page\elf\sword-muse\assault.png" alt="Chain Strike Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Crippling Dance:</span>
-            <p style="margin: 0;">For 30sec. all party members P./M. Attack P./M. Def +15%. Cannot be used with Song of Assault. Consumes 100 Spirit ore.</p>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Song of Assault:</span>
+            <p style="margin: 0;">For 30sec. All party member's P./M. Attack & P./M. Def +15%. Cannot be used with Cripling dance. Consumes 100 Spirit ore.</p>
         </div>
     </div>
     <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\spectral-dancer\shield.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <img src="class-page\elf\sword-muse\might.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Shield Dance:</span>
-            <p style="margin: 0;">For 2min. P./M. Def +5%. Attribute Resistance +5. Consumes 10 Spirit Ore.</p>
-        </div>
-    </div>
-    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\spectral-dancer\sword.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Dance of Might:</span>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Song of Might:</span>
             <p style="margin: 0;">For 2min. P. Atk +8%, Atk. Spd +3%, P. Critical Rate +10. Consumes 10 Spirit Ore.</p>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\elf\sword-muse\shield.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Shield Song:</span>
+            <p style="margin: 0;">For 2min. P./M. Def +5% Attribute resistance +5. Consumes 10 Spirit Ore.</p>
         </div>
     </div>
 
     <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\shillien-templar\freeze.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <img src="class-page\elf\evas-templar\entagle.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Freezing Strike:</span>
-            <p style="margin: 0;">Freezing Strike have been reworked. Freezes the surrounding air inflicting water damage on the enemy, decreasing their speed -20% for 20second. This is a very fast skill.</p>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Entangle:</span>
+            <p style="margin: 0;">Entangle have been reworked. For 20sec. The enemy's Speed -30%. This is a very fast skill.</p>
         </div>
     </div>
 	 <div style="display: flex; align-items: center; margin-bottom: 15px;">
         <img src="class-page\human\hierophant\eyedef.png" alt="Chain Strike Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
             <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Eye of the Hunter:</span>
-            <p style="margin: 0;">For 10min. Increases PvE Defence +3%</p>
+            <p style="margin: 0;">For 10min. Increases PvE Defence +3%.</p>
         </div>
     </div>
 	<div style="display: flex; align-items: center; margin-bottom: 15px;">
@@ -388,20 +380,7 @@ theme_color="#3b5998"></div>
             <p style="margin: 0;">Attacks the enemy with 1592(Max lvl) Power added to P. Atk. Cannot be used with bow or fist weapon.</p>
         </div>
     </div>
-     <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\spectral-dancer\shadow.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Dance of Shadows:</span>
-            <p style="margin: 0;">For 50 sec. party member's Speed -50%, They are invisible from monsters and players. The effect dissapears if any partyy member launches an attack. Requires dual swords.</p>
-        </div>
-    </div>
-	 <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\spectral-dancer\poison.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Poison Blade Dance:</span>
-            <p style="margin: 0;">Poison Blade Dance have been reworked. Swords emit a toxic cloud that poisons nearby enemies and deals damage per second for 20sec. Requires dual swords.</p>
-        </div>
-    </div>
+    
     <div style="display: flex; align-items: center; margin-bottom: 15px;">
         <img src="class-page\elf\sword-muse\scorpion.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
@@ -409,14 +388,22 @@ theme_color="#3b5998"></div>
             <p style="margin: 0;">Decreases the enemy's Speed after a basic attack, poisoning them and blocking their P./M. Skills.</p>
         </div>
     </div>
+
+    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\elf\sword-muse\silence.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Song of Silence:</span>
+            <p style="margin: 0;">Block's enemie's P./M. skills with high propability for 15seconds.</p>
+        </div>
+    </div>
 	 <div style="display: flex; align-items: center; margin-bottom: 15px;">
         <img src="class-page\elf\sword-muse\def.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
             <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Heavy Armor Mastery:</span>
-            <p style="margin: 0;">After 40lvl you continue learning Heavy armor mastery until lvl 74.</p>
+            <p style="margin: 0;">After 40lvl u continue learning Heavy armor mastery until lvl 74.</p>
         </div>
     </div>
-	 
+	
 	<div style="display: flex; align-items: center; margin-bottom: 15px;">
         <img src="class-page\human\paladin\sigil.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
@@ -426,12 +413,12 @@ theme_color="#3b5998"></div>
     </div>
 </div>
 	</div>	
-<div class="wiki__content" data-name-tab="Ghosthunter">
+<div class="wiki__content" data-name-tab="Windrider">
 						<div class="wiki__content-title flex-sc">
 								<div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
 								<div class="wiki__content-title-info">
-									<div class="wiki__content-title-name">Ghost Hunter</div>
-									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;"> is a master of stealth and assassination, specializing in deadly close-range attacks. With their ability to vanish from sight, strike swiftly, and evade enemy defenses, they are the ultimate silent killer. Ghost Hunters excel in one-on-one combat, dealing massive critical damage while avoiding detection, making them a nightmare for their enemies in both PvP and PvE scenarios.</div>
+									<div class="wiki__content-title-name">Wind Rider</div>
+									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">is a master of stealth and speed, excelling in burst damage and quick, precise attacks. As an elite assassin, the Wind Rider uses their agility and evasion to swiftly close in on enemies, dealing lethal damage before disappearing into the shadows. With high mobility and critical strike capabilities, they are ideal for isolating and eliminating key targets in both PvP and PvE. Their role revolves around hit-and-run tactics, utilizing their fast movement and evasion skills to avoid damage while maximizing their offensive potential.</div>
 								</div>
 								
 							</div>
@@ -452,10 +439,10 @@ theme_color="#3b5998"></div>
         </div>
     </div>
 	<div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\ghost-hunter\counter.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <img src="class-page\elf\wind-rider\evasion.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Counter Attack:</span>
-            <p style="margin: 0;">For 10sec. Transfers damage from meele attacks and skills back to the enemy.</p>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Evasion:</span>
+            <p style="margin: 0;">This skill have been reworked. Allows user to avoid short & long range physical attack skills with very high propability for 10 sec.</p>
         </div>
     </div>
     <div style="display: flex; align-items: center; margin-bottom: 15px;">
@@ -469,7 +456,7 @@ theme_color="#3b5998"></div>
 	<div style="display: flex; align-items: center; margin-bottom: 15px;">
         <img src="class-page\human\adventurer\fan.png" alt="Chain Strike Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Fan of Knives</span>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Fan of Knives:</span>
             <p style="margin: 0;">Fatal blow the enemy & nearby enemies. This skill has increased critical rate & Increased Pve Power, in PvP this skill is has no power. Consumes 10 Spirit ore.</p>
         </div>
     </div>
@@ -481,11 +468,11 @@ theme_color="#3b5998"></div>
             <p style="margin: 0;">Attacks the enemy by throwing a dagger and decreases speed by 80% for 10 second. Requires dagger to be equiped. This skill cooldown is fixed.</p>
         </div>
     </div>
-	<div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\human\adventurer\trick.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+	 <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\human\adventurer\switch.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Trick:</span>
-            <p style="margin: 0;">Reduces the enemy's aggresiveness, cancelling their target with very high rate.</p>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Switch:</span>
+            <p style="margin: 0;">Confuses the enemy, canceling their target with very high rate.</p>
         </div>
     </div>
 	 <div style="display: flex; align-items: center; margin-bottom: 15px;">
@@ -497,12 +484,12 @@ theme_color="#3b5998"></div>
     </div>
 	</div>
 	</div>
-	<div class="wiki__content" data-name-tab="Ghostsentinel">
+<div class="wiki__content" data-name-tab="Moonlightsentinel">
 								<div class="wiki__content-title flex-sc">
 								<div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
 								<div class="wiki__content-title-info">
-									<div class="wiki__content-title-name">Ghost Sentinel</div>
-									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;"> is a lethal archer, capable of inflicting heavy damage from a distance while remaining elusive. Their dark-infused arrows strike with incredible precision and power, often critically wounding or killing enemies in a single shot. The Ghost Sentinel’s agility and high evasion allow them to stay out of harm's way, making them ideal for both PvP skirmishes and long-range PvE engagements.</div>
+									<div class="wiki__content-title-name">Moonlight Sentinel</div>
+									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">is the epitome of precision and agility, excelling as a long-range damage dealer. With unparalleled speed and accuracy, they rain down arrows on enemies from a distance, making them lethal in both single-target and group battles. The Moonlight Sentinel's ability to land critical hits with exceptional frequency makes them one of the most feared archers in the battlefield. Their high mobility and evasion allow them to keep a safe distance while delivering continuous, devastating attacks. In both PvP and PvE, they play the role of a sniper, focusing on eliminating key targets swiftly.</div>
 								</div>
 								
 							</div>
@@ -523,10 +510,17 @@ theme_color="#3b5998"></div>
         </div>
     </div>
 	<div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\ghost-sentinel\fatal.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <img src="class-page\elf\moonlight-sentinel\evade.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Fatal Counter:</span>
-            <p style="margin: 0;">Fires an agony arrow on target with high power attack. Consumes Hp to increase its Damage. Requires a bow.</p>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Evade Shot:</span>
+            <p style="margin: 0;">Attacks the enemy and Increasing All kind of evasion for 30Sec.</p>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\elf\moonlight-sentinel\rapid.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Rapid Fire:</span>
+            <p style="margin: 0;">For 2 minutes, increases P. Atk. and Atk. Spd. by 20%. Decreases range by 50%. Requires a bow.</p>
         </div>
     </div>
 	<div style="display: flex; align-items: center; margin-bottom: 15px;">
@@ -536,14 +530,6 @@ theme_color="#3b5998"></div>
             <p style="margin: 0;">Burst shot have been reworked. Close range attack that deals damage on enemy and nearby enemies with high power very usefull skill in PvE but not in PvP.</p>
         </div>
     </div>
-    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\ghost-sentinel\dead.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Dead Eye:</span>
-            <p style="margin: 0;">When using a bow increases Accuracy, P. Attack, Critical damage for basic attacks & Decreases your attack speed.</p>
-        </div>
-    </div>
-	
 	<div style="display: flex; align-items: center; margin-bottom: 15px;">
         <img src="class-page\human\sagittarius\real.png" alt="Chain Strike Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
@@ -570,83 +556,12 @@ theme_color="#3b5998"></div>
     </div>
 	</div>
 	</div>
-<div class="wiki__content" data-name-tab="Stormscreamer">
-							<div class="wiki__content-title flex-sc">
+<div class="wiki__content" data-name-tab="Evassaint">
+									<div class="wiki__content-title flex-sc">
 								<div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
 								<div class="wiki__content-title-info">
-									<div class="wiki__content-title-name">Storm Screamer</div>
-									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;"> commands the power of wind and dark magic to unleash devastating magical attacks on their enemies. With their ability to cast high-damage area-of-effect spells and powerful single-target nukes, Storm Screamers are a force of destruction on the battlefield. Their mastery over wind magic allows them to deal massive damage quickly, making them ideal for both crowd control and burst damage in PvP and PvE.</div>
-								</div>
-								
-							</div>
-<div style="font-family: 'Arial', sans-serif; font-size: 18px; line-height: 1.6; color: #fff;">
-    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\human\archmage\chaos.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Arcane Chaos:</span>
-            <p style="margin: 0;">For 20sec decreases buff cancel resistance Debuff resistance and drains 24mp every second. Increases P. Skill Mp consumption and M. Skill Mp consumption on the enemy.</p>
-        </div>
-    </div>
-
-    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\human\archmage\charge.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Magical Charge:</span>
-            <p style="margin: 0;">Attacks nearby enemies has a chance to inflict stun and teleports you to the front.</p>
-        </div>
-    </div>
-	
-	<div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\storm-screamer\tempest.png" alt="Chain Strike Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Tempest:</span>
-            <p style="margin: 0;">Stirs up a hurricane that inflicts Wind damage on the enemy and nearby enemies. This skill has higher Pve effectiveness.</p>
-        </div>
-    </div>
-	<div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\human\soultaker\vamp.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Vampiric Claw:</span>
-            <p style="margin: 0;">This skill has been reworked. Deals magic damage to an enemy & absorbs 30% HP in PvE & 20% in PvP of the damage as HP.</p>
-        </div>
-    </div>
-    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\human\soultaker\cdl.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Curse Death Link:</span>
-            <p style="margin: 0;">This skill has been reworked, has increased power the lower your HP is in PvP, PvE Power has been decreased.</p>
-        </div>
-    </div>
-    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\storm-screamer\wind.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Seed of Wind:</span>
-            <p style="margin: 0;">Uses energy of the wind to Increase wind Attack attribute by 20.</p>
-        </div>
-    </div>
-
-    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\storm-screamer\stance.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Wind Stance:</span>
-            <p style="margin: 0;">M. Skill Critical Damage +5%.</p>
-        </div>
-    </div>
-	 <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\storm-screamer\wave.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Cyclone:</span>
-            <p style="margin: 0;">Continiously inflicts powerful wind damage. User cannot move while casting and there is additional MP consumption each time the effect occurs. Consumes 1 Magic symbol. The skill cooldown is fixed.</p>
-        </div>
-    </div>
-	</div>
-	</div>
-<div class="wiki__content" data-name-tab="Shilliensaint">
-								<div class="wiki__content-title flex-sc">
-								<div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
-								<div class="wiki__content-title-info">
-									<div class="wiki__content-title-name">Shillien Saint</div>
-									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;"> is a powerful support class, specializing in enhancing their allies with dark blessings and powerful buffs. They can heal, restore mana, and strengthen their party with a wide range of skills. In addition to boosting their allies' effectiveness in combat, Shillien Saints can also weaken enemies with potent debuffs, playing a critical role in both offense and defense during large-scale battles.</div>
+									<div class="wiki__content-title-name">Eva's Saint</div>
+									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">is a master of restorative magic and support, bringing unparalleled healing and protection to their allies. Not only can they mend wounds with powerful healing spells, but they also have the unique ability to restore mana to their comrades, ensuring their team never runs out of the energy needed to fight. Their buffs enhance defense, magic resistance, and other key stats, while cleansing debuffs to keep their allies at peak performance. Eva's Saint excels at keeping their team alive and empowered, making them a vital presence in both PvE and PvP encounters.</div>
 								</div>
 								
 							</div>
@@ -663,44 +578,18 @@ theme_color="#3b5998"></div>
         <img src="class-page\elf\evas-saint\cleanse.png" alt="Chain Strike Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
             <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Cleanse:</span>
-            <p style="margin: 0;">Cancel the targets debuffs.Cleanse skill has been added to Shillien Saint.</p>
+            <p style="margin: 0;">Cancel the targets debuffs.Cleanse skill has been added to Evas Saint.</p>
         </div>
     </div>
-     <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\shillien-saint\backfire.png" alt="Chain Strike Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+    
+    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\elf\evas-saint\mana.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Magical Backfire:</span>
-            <p style="margin: 0;">For 20sec. Target's MP Consumption +50% and Casting Speed & Attack Speed -20%.</p>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Mana Gain:</span>
+            <p style="margin: 0;">For 30min. Party member's recovery rate +30. This buff does not take buff slot.</p>
         </div>
     </div>
-	 <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\shillien-saint\bind.png" alt="Chain Strike Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Hell Binding:</span>
-            <p style="margin: 0;">Lift's the target in the air Immobilizing them.</p>
-        </div>
-    </div>
-	<div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\human\hierophant\melody.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Recovery Melody:</span>
-            <p style="margin: 0;">Recovers the target's CP by 858.</p>
-        </div>
-    </div>
-	<div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\shillien-saint\stauros.png" alt="Chain Strike Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Summon Demonic Crucifix:</span>
-            <p style="margin: 0;">Attacks target and nearby enemies and casts a curse Attack speed, Casting speed -30% and speed -180. Consumes 30 Spirit ore.</p>
-        </div>
-    </div>
-	<div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\shillien-saint\lumi.png" alt="Chain Strike Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Mark of Lumi:</span>
-            <p style="margin: 0;">Leaves a mark that decreases target's P./M. Defence by 10% and consumes 113Hp per second for 10seconds.</p>
-        </div>
-    </div>
+
     <div style="display: flex; align-items: center; margin-bottom: 15px;">
         <img src="class-page\human\cardinal\chain.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
@@ -716,6 +605,27 @@ theme_color="#3b5998"></div>
             <p style="margin: 0;">For 30sec. Decreases M. Skill Mp Consumption by 50% and magic skill Cooldown by5%. Eliminates magic cancel during magic use. Gives Mana burst effect that increase M. Attack, Casting speed by the time buff last's up to 4Lvl. Consumes 200 Spirit ore.</p>
         </div>
     </div>
+	<div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\elf\evas-saint\aoesleep.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Mass Fatal Sleep:</span>
+            <p style="margin: 0;">Inflict sleep on nearby enemies for 30sec.</p>
+        </div>
+    </div>
+    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\human\cardinal\sleep.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Fatal Sleep:</span>
+            <p style="margin: 0;">Inflicts sleep on the target for 20sec. After that Attk speed C. speed & speed decreases by 60%.</p>
+        </div>
+    </div>
+	 <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\human\cardinal\tree.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Summon Tree of Life:</span>
+            <p style="margin: 0;">Summons Tree of Life. The summoned tree heals nearby members for 30% and removes debuffs from them.</p>
+        </div>
+    </div>
 	 <div style="display: flex; align-items: center; margin-bottom: 15px;">
         <img src="class-page\elf\evas-saint\massrech.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
@@ -725,12 +635,12 @@ theme_color="#3b5998"></div>
     </div>
 	</div>
 	</div>
-<div class="wiki__content" data-name-tab="Spectralmaster">
-								<div class="wiki__content-title flex-sc">
+<div class="wiki__content" data-name-tab="Elementalmaster">
+									<div class="wiki__content-title flex-sc">
 								<div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
 								<div class="wiki__content-title-info">
-									<div class="wiki__content-title-name">Spectral Master</div>
-									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">is a dark summoner, calling forth powerful spectral beings to fight alongside them. These spectral summons can deal heavy damage, defend the summoner, and disrupt enemy formations. With the ability to command multiple spectral beasts, the Spectral Master excels at both offensive and defensive tactics, making them a versatile asset in both PvP and PvE encounters.</div>
+									<div class="wiki__content-title-name">Elemental Master</div>
+									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">commands the forces of nature and summons powerful elemental creatures to fight alongside them. With their summons, they can unleash devastating attacks while keeping a safe distance from danger. The Elemental Master’s strength lies in their ability to adapt their summons to various situations, ensuring their pets can either protect, assist in damage dealing, or disrupt enemy formations. This master of summoned beasts is essential for those who prefer a tactical, pet-based style of play, excelling in PvE and PvP through strategic use of their elemental companions.</div>
 								</div>
 								
 							</div>
@@ -750,6 +660,14 @@ theme_color="#3b5998"></div>
             <p style="margin: 0;">Switches locations with target servitor.</p>
         </div>
     </div>
+
+    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\elf\elemental-master\cubic.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Elemental Master Cubics:</span>
+            <p style="margin: 0;">All cubics have been reworked and boosted.</p>
+        </div>
+    </div>
 	<div style="display: flex; align-items: center; margin-bottom: 15px;">
         <img src="class-page\human\soultaker\pain.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
@@ -757,18 +675,10 @@ theme_color="#3b5998"></div>
             <p style="margin: 0;">Transfers 50% of the recieved damage to a servivor.</p>
         </div>
     </div>
-    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\spectral-master\cubic.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
-        <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Spectral Master Cubics:</span>
-            <p style="margin: 0;">All cubics have been reworked and boosted.</p>
-        </div>
-    </div>
-	
 	<div style="display: flex; align-items: center; margin-bottom: 15px;">
-        <img src="class-page\dark-elf\spectral-master\pet.png" alt="Chain Strike Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <img src="class-page\elf\elemental-master\pet.png" alt="Chain Strike Icon" style="width: 50px; height: 50px; margin-right: 10px;">
         <div>
-            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Spectral Master Summons:</span>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Elemental Master Summons:</span>
             <p style="margin: 0;">All summons have been reworked.</p>
         </div>
     </div>
@@ -818,6 +728,79 @@ theme_color="#3b5998"></div>
     </div>
 	</div>
 	</div>
+<div class="wiki__content" data-name-tab="Mysticmuse">
+								<div class="wiki__content-title flex-sc">
+								<div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
+								<div class="wiki__content-title-info">
+									<div class="wiki__content-title-name">Mystic Muse</div>
+									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">is a powerful elemental mage, specializing in the destructive magic of water and ice. With an array of long-range spells, they can freeze their enemies in place and unleash devastating damage. Their control over the battlefield is unmatched, slowing and immobilizing foes while dealing relentless magical attacks. Whether in large-scale PvP or PvE encounters, the Mystic Muse excels at keeping enemies at a distance and delivering overwhelming magical force. Their versatile elemental control makes them a force to be reckoned with in any combat situation.</div>
+								</div>
+								
+							</div>
+<div style="font-family: 'Arial', sans-serif; font-size: 18px; line-height: 1.6; color: #fff;">
+    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\elf\mystic-muse\shackle.png" alt="Chain Strike Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Freezing Shackle:</span>
+            <p style="margin: 0;">Freezes the enemy with a powerful cold wind causing enemy loosing HP per sec. Skill lasts for 15sec and has increased PvP Damage.</p>
+        </div>
+    </div>
+    
+    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\human\archmage\chaos.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Arcane Chaos:</span>
+            <p style="margin: 0;">For 20sec decreases buff cancel resistance Debuff resistance and drains 24mp every second. Increases P. Skill Mp consumption and M. Skill Mp consumption on the enemy.</p>
+        </div>
+    </div>
+
+    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\human\archmage\charge.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Magical Charge:</span>
+            <p style="margin: 0;">Attacks nearby enemies has a chance to inflict stun and teleports you to the front.</p>
+        </div>
+    </div>
+	
+	<div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\elf\mystic-muse\splash.png" alt="Chain Strike Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Aqua Splash:</span>
+            <p style="margin: 0;">Creates a massive tidal wave that deals water damage to nearby enemies. This skill has higher Pve effectiveness.</p>
+        </div>
+    </div>
+    
+    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\elf\mystic-muse\water.png" alt="Chain Hydra Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Seed of Water:</span>
+            <p style="margin: 0;">Uses energy of the ice to increase water Attack attribute by 20.</p>
+        </div>
+    </div>
+
+    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\elf\mystic-muse\stance.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Water Stance:</span>
+            <p style="margin: 0;">Increase Magic Critical Chance by 5.</p>
+        </div>
+    </div>
+	 <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\human\archmage\cancel.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Cancel:</span>
+            <p style="margin: 0;">Removes one or several of the target's buffs. Buffs return to the enemy after 20second.</p>
+        </div>
+    </div>
+	 <div style="display: flex; align-items: center; margin-bottom: 15px;">
+        <img src="class-page\elf\mystic-muse\wave.png" alt="Noble Sacrifice Icon" style="width: 50px; height: 50px; margin-right: 10px;">
+        <div>
+            <span style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Raging Waves:</span>
+            <p style="margin: 0;">Continiously inflicts powerful water damage. User cannot move while casting and there is additional MP consumption each time the effect occurs. Consumes 1 Magic symbol. The skill cooldown is fixed.</p>
+        </div>
+    </div>
+	</div>
+	</div>
 					</section>
 				<div class="progress-wrap"><svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/></svg></div>
     <footer class="footer33">
@@ -834,9 +817,9 @@ theme_color="#3b5998"></div>
                 <div class="footer__cpr-title">© 2023-2024 Project4</div>
                 <div class="footer__cpr-text">Game servers under GNU General Public License GPLv3.</div>
                      <div class="footer__cpr-links flex-sc">
-                  <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.htm#rules" target="_blank">game rules</a></div>
-                  <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.htm#privacypolicy" target="_blank">Terms & Conditions</a></div>
-                                    <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.htm#privacypolicy" target="_blank">Privacy Policy</a></div>
+                 <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.html#rules" target="_blank">game rules</a></div>
+                  <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.html#privacypolicy" target="_blank">Terms & Conditions</a></div>
+                                    <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.html#privacypolicy" target="_blank">Privacy Policy</a></div>
 
                      </div>
             </div>
@@ -856,5 +839,6 @@ theme_color="#3b5998"></div>
 <script src="scripts\tablesizer.js"></script>
 <script src="scripts\scripts.js"></script>
 <script src="scripts\streams.js"></script>
-<script src="scripts\top.js"></script></body>
+<script src="scripts\top.js"></script>
+</body>
 </html>

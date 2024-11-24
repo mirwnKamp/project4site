@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -15,29 +16,11 @@
   <meta charset="utf-8">
   <!--prime:bb8d17b8-->
   <title>Project4 - Lineage 2</title>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Detect if the site is being run locally (file:// protocol)
-        const isLocal = window.location.protocol === "file:";
-        const baseURL = isLocal ? "" : "https://L2project4.com/";
-
-        // Select all anchor tags on the page
-        const anchorTags = document.querySelectorAll('a') || document.querySelectorAll('link');
-
-        // Loop through all the anchor tags and adjust the href
-        anchorTags.forEach(anchor => {
-            // If the href doesn't start with 'http' or 'https', prepend the base URL
-            if (anchor.getAttribute('href') && !anchor.getAttribute('href').startsWith('http')) {
-                anchor.setAttribute('href', baseURL + anchor.getAttribute('href'));
-            }
-        });
-    });
-  </script>
   <meta property="og:title" content="Project4 - Lineage 2">
   <meta property="og:site_name" content="L2Project4" >
   <meta property="robots" content="index,follow" >
   <meta property="og:type" content="website" >
-  <meta property="og:url" content="index.htm" >
+  <meta property="og:url" content="index.html" >
   <meta name="description" content= "L2 Project4." >
   <meta property="og:description" content="Project4 - Lineage 2, the highest quality gameplay." >
   <meta property="twitter:description" content="Project4 - highest quality Lineage 2 Private server." >
@@ -100,13 +83,12 @@ theme_color="#3b5998"></div>
       <div class="wrapper">
         <header class="header">
           <nav class="nav">
-            <div class="flex-sc content-area"><a href="index.htm" class="flex-cc nav__logo"><img alt="" src="main-page\4only.png"></a> 
+            <div class="flex-sc content-area"><a href="index.html" class="flex-cc nav__logo"><img alt="" src="main-page\4only.png"></a> 
               <div class="flex-sc nav__links">
-                <div class="flex-cc nav__links-item"><a href="index.htm">home</a></div>
-                <div class="flex-cc nav__links-item"><a href="wiki.htm">WIKI</a></div>
-				 <div class="flex-cc nav__links-item"><a href="class.htm">GAMEPLAY</a></div>
-				  <div class="flex-cc nav__links-item"><a href="items.htm">ITEMS</a></div>
-                <div class="flex-cc nav__links-item"><a href="startgame.htm">START GAME</a></div>
+                <div class="flex-cc nav__links-item"><a href="index.html">home</a></div>
+                <div class="flex-cc nav__links-item"><a href="wiki.html">WIKI</a></div>
+				 <div class="flex-cc nav__links-item"><a href="class.html">GAMEPLAY</a></div>
+                <div class="flex-cc nav__links-item"><a href="startgame.html">START GAME</a></div>
                 <div class="flex-cc nav__links-item"><a href="https://discord.gg/jG8GzyqGMy">DISCORD</a></div>
 				<div class="flex-cc nav__links-item"><a href="Vote Links here">VOTE FOR US</a></div>
               </div>
@@ -124,24 +106,24 @@ theme_color="#3b5998"></div>
             </div>
 			<div class="nav__langs-items flex-ss">
            
-            <a hreflang="en" href="index.htm" class="flex-sc">
+            <a hreflang="en" href="index.html" class="flex-sc">
             <div class="nav__langs-items-icon flex-cc"><img src="main-page\en.webp" alt=""></div>
             <div class="nav__langs-items-name">English</div>
             </a>
             </div>
-			</div>
+			</div> 
       
              <a href="Account Manager Link Edw" class="flex-cc button"><img alt="" src="main-page\sign_in_icon.webp"><span>Account</span></a>
               <div class="nav__open-links">
                 <div class="nav__open-links-item"></div>
               </div>
             </div>
-            <div class="banners" style="position: realative; z-index: 99999;float:right"></div>
+            <div class="banners" style="position: relative; z-index: 99999; float: right;"></div>
           </nav>
           <div class="flex-cc header__box">
             <div class="header__content">
               <div class="flex-cc header__content-logo">
-                <div class="header__content-logo-left"></div><a href="index.htm" class="flex-cc header__content-logo-center"><img alt="" src="main-page\p4.png"></a>
+                <div class="header__content-logo-left"></div><a href="index.html" class="flex-cc header__content-logo-center"><img alt="" src="main-page\p4.png"></a>
                 <div class="header__content-logo-right"></div>
               </div>
               <div class="header__content-promo">
@@ -156,7 +138,7 @@ theme_color="#3b5998"></div>
 
 <br>
 
-              <!-- <div class="header__content-timer-title">Clock countdown HERE</div>
+              <div class="header__content-timer-title">Clock countdown HERE</div>
                <div class="flex-cs header__content-timer-time timer1" data-end-msg="<div class='header__content-timer-time-end flex-cc'>SUCCESSFULLY STARTED!</div>" data-lang="ge" data-time="1692550800">
                   <div class="header__content-timer-time-box">
                     <div class="flex-cc header__content-timer-time-num"></div>
@@ -174,7 +156,7 @@ theme_color="#3b5998"></div>
                     <div class="flex-cc header__content-timer-time-num"></div>
                     <div class="header__content-timer-time-desc">second</div>
                   </div> 
-                </div>  -->
+                </div> 
               </div>
             </div>
           </div>
@@ -245,33 +227,32 @@ theme_color="#3b5998"></div>
               <div class="section__title-center-big">SERVER BRIEF</div>
             </div>
             <div class="section__title-right"></div>
-            <div class="section__title-small">To see more <a href="wiki.htm"><u>click here</u></a></div>
+            <div class="section__title-small">To see more <a href="wiki.html"><u>click here</u></a></div>
           </div>
           <div class="content-area flex-ss">
-            <div class="col-1-4"><a href="https://l2project4.com/wiki.htm#rates">
+            <div class="col-1-4">
               <div class="information__box"><img alt="" src="main-page\6.webp" class="information__box-bg">
                 <div class="information__box-content">
                   <div class="flex-cc information__box-icon"><img alt="" src="main-page\6.webp"></div>
                   <div class="information__box-title">Mid rate</div>
                   <div class="information__box-text">
-                    <p>Mid rates help the player to better show his skill & experience in the game                
-                  </div>
+                    <p>Mid rates help the player to better show his skill & experience in the game                  </div>
                 </div>
                 <div class="flex-cc information__box-button">more</div>
               </div>
             </div>
-            <div class="col-1-4"><a href="https://l2project4.com/wiki.htm#rules">
+            <div class="col-1-4">
               <div class="information__box"><img alt="" src="main-page\bot.webp" class="information__box-bg">
                 <div class="information__box-content">
                   <div class="flex-cc information__box-icon"><img alt="" src="main-page\bot2.webp"></div>
                   <div class="information__box-title">protection</div>
                   <div class="information__box-text">
-                    <p>The server will have both active and passive protection against all kinds of cheats. Read Rules                 </div>
+                    <p>The server will have both active and passive protection against all kinds of cheats                  </div>
                 </div>
                 <div class="flex-cc information__box-button">more</div>
               </div>
             </div>
-			<div class="col-1-4" ><a href="https://l2project4.com/class.htm">
+			<div class="col-1-4">
               <div class="information__box"><img alt="" src="main-page\classes.jpg" class="information__box-bg">
                 <div class="information__box-content">
                   <div class="flex-cc information__box-icon"><img alt="" src="main-page\classes.jpg"></div>
@@ -282,18 +263,18 @@ theme_color="#3b5998"></div>
                 <div class="flex-cc information__box-button">more</div>
               </div>
             </div>
-			<div class="col-1-4" ><a href="https://l2project4.com/wiki.htm#currency">
-              <div class="information__box"><img alt="" src="main-page\classes.jpg" class="information__box-bg">
+            <div class="col-1-4">
+              <div class="information__box"><img alt="" src="main-page\cashback.webp" class="information__box-bg">
                 <div class="information__box-content">
                   <div class="flex-cc information__box-icon"><img alt="" src="main-page\cashback2.webp"></div>
-                  <div class="information__box-title">Balanced Donations</div>
+                  <div class="information__box-title">cashback</div>
                   <div class="information__box-text">
-                    <p>Our server has Balanced Donations that has no impact in the game.                  </div>
+                    <p>You can get back the donated money with us. For more information, please read the terms                  </div>
                 </div>
                 <div class="flex-cc information__box-button">more</div>
+				
               </div>
             </div>
-            
           
         </section>
        
@@ -313,9 +294,9 @@ theme_color="#3b5998"></div>
                 <div class="footer__cpr-title">© 2023-2024 Project4</div>
                 <div class="footer__cpr-text">Made by Players for Players.</div>
                      <div class="footer__cpr-links flex-sc">
-                  <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.htm#rules" target="_blank">game rules</a></div>
-                  <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.htm#privacypolicy" target="_blank">Terms & Conditions</a></div>
-                                    <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.htm#privacypolicy" target="_blank">Privacy Policy</a></div>
+                  <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.html#rules" target="_blank">game rules</a></div>
+                  <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.html#privacypolicy" target="_blank">Terms & Conditions</a></div>
+                                    <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.html#privacypolicy" target="_blank">Privacy Policy</a></div>
 
                      </div>
             </div>
@@ -335,6 +316,5 @@ theme_color="#3b5998"></div>
 <script src="scripts\tablesizer.js"></script>
 <script src="scripts\scripts.js"></script>
 <script src="scripts\streams.js"></script>
-<script src="scripts\top.js"></script>
-</body>
+<script src="scripts\top.js"></script></body>
 </html>

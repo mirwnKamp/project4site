@@ -15,29 +15,11 @@
   <meta charset="utf-8">
   <!--prime:bb8d17b8-->
   <title>Project4 - Lineage 2</title>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Detect if the site is being run locally (file:// protocol)
-        const isLocal = window.location.protocol === "file:";
-        const baseURL = isLocal ? "" : "https://L2project4.com/";
-
-        // Select all anchor tags on the page
-        const anchorTags = document.querySelectorAll('a') || document.querySelectorAll('link');
-
-        // Loop through all the anchor tags and adjust the href
-        anchorTags.forEach(anchor => {
-            // If the href doesn't start with 'http' or 'https', prepend the base URL
-            if (anchor.getAttribute('href') && !anchor.getAttribute('href').startsWith('http')) {
-                anchor.setAttribute('href', baseURL + anchor.getAttribute('href'));
-            }
-        });
-    });
-  </script>
   <meta property="og:title" content="Project4 - Lineage 2">
   <meta property="og:site_name" content="L2Project4" >
   <meta property="robots" content="index,follow" >
   <meta property="og:type" content="website" >
-  <meta property="og:url" content="index.htm" >
+  <meta property="og:url" content="index.html" >
   <meta name="description" content= "L2 Project4." >
   <meta property="og:description" content="Project4 - Lineage 2, the highest quality gameplay." >
   <meta property="twitter:description" content="Project4 - highest quality Lineage 2 Private server." >
@@ -52,10 +34,10 @@
   <meta name="viewport" content="width=device-width" >
   <link rel="shortcut icon" href="main-page\4only.png" >
   <link rel="icon" href="main-page\4only.png" >
-  <link rel="stylesheet" href="scripts\main.css" >
-  <link rel="stylesheet" href="scripts\swiper.css" >
+  <link rel="stylesheet" href="https://predator.ge/css/main.css" >
+  <link rel="stylesheet" href="https://predator.ge/libs/swiper/swiper.css" >
   <link rel="apple-touch-icon" sizes="256x256" href="main-page\4only.png" >
-  <link rel="stylesheet" href="scripts\top.css" >
+  <link rel="stylesheet" href="https://predator.ge/css/top.css">
   <style>
      .preload {
      background-color: #1d1a19;
@@ -77,36 +59,36 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
    <div id="fb-root"></div>
-<script>
-setTimeout(function(){
-    window.fbAsyncInit = function() {
-        FB.init({
-            xfbml: true,
-            version: 'v8.0'
-        });
-    };
-
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_GB/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-}, 2500);
-</script>
+   <script>
+	setTimeout(function(){
+		window.fbAsyncInit = function() {
+			FB.init({
+				xfbml: true,
+				version: 'v8.0'
+			});
+		};
+	
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/en_GB/sdk/xfbml.customerchat.js';
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	}, 2500);
+	</script>
 <div class="fb-customerchat" attribution=setup_tool page_id="110517210349704" 
 theme_color="#3b5998"></div>
       <div class="wrapper">
         <header class="header">
           <nav class="nav">
-            <div class="flex-sc content-area"><a href="index.htm" class="flex-cc nav__logo"><img alt="" src="main-page\4only.png"></a> 
+            <div class="flex-sc content-area"><a href="index.html" class="flex-cc nav__logo"><img alt="" src="main-page\4only.png"></a> 
               <div class="flex-sc nav__links">
-                <div class="flex-cc nav__links-item"><a href="index.htm">home</a></div>
-                <div class="flex-cc nav__links-item"><a href="wiki.htm">WIKI</a></div>
-				 <div class="flex-cc nav__links-item"><a href="class.htm">GAMEPLAY</a></div>
-				  <div class="flex-cc nav__links-item"><a href="items.htm">ITEMS</a></div>
-                <div class="flex-cc nav__links-item"><a href="startgame.htm">START GAME</a></div>
+                <div class="flex-cc nav__links-item"><a href="index.html">home</a></div>
+                <div class="flex-cc nav__links-item"><a href="wiki.html">WIKI</a></div>
+				 <div class="flex-cc nav__links-item"><a href="class.html">GAMEPLAY</a></div>
+				  <div class="flex-cc nav__links-item"><a href="items.html">ITEMS</a></div>
+                <div class="flex-cc nav__links-item"><a href="startgame.html">START GAME</a></div>
                 <div class="flex-cc nav__links-item"><a href="https://discord.gg/jG8GzyqGMy">DISCORD</a></div>
 				<div class="flex-cc nav__links-item"><a href="Vote Links here">VOTE FOR US</a></div>
               </div>
@@ -124,7 +106,7 @@ theme_color="#3b5998"></div>
             </div>
 			<div class="nav__langs-items flex-ss">
            
-            <a hreflang="en" href="index.htm" class="flex-sc">
+            <a hreflang="en" href="index.html" class="flex-sc">
             <div class="nav__langs-items-icon flex-cc"><img src="main-page\en.webp" alt=""></div>
             <div class="nav__langs-items-name">English</div>
             </a>
@@ -141,7 +123,7 @@ theme_color="#3b5998"></div>
           <div class="flex-cc header__box">
             <div class="header__content">
               <div class="flex-cc header__content-logo">
-                <div class="header__content-logo-left"></div><a href="index.htm" class="flex-cc header__content-logo-center"><img alt="" src="main-page\p4.png"></a>
+                <div class="header__content-logo-left"></div><a href="index.html" class="flex-cc header__content-logo-center"><img alt="" src="main-page\p4.png"></a>
                 <div class="header__content-logo-right"></div>
               </div>
               <div class="header__content-promo">
@@ -285,8 +267,7 @@ theme_color="#3b5998"></div>
 								</div>
 								<div class="wiki-icon-container">
 									<img class="wiki-icon-image2" src="wiki-page\transfer.webp"></img>
-									Professions 1, 2 and 3 can be obtained without a quest though NPC in any town,
-									4Th Class change can be done via Custom Quest.</div>
+									Professions 1, 2 and 3 can be obtained without a quest though NPC in any town, 4Th Class change can be done via Custom Quest.</div>
 								<div class="wiki-icon-container">
 									<img class="wiki-icon-image2" src="wiki-page\pc.webp"></img>
 									Dual box is NOT allowed on this server								</div>
@@ -554,10 +535,9 @@ theme_color="#3b5998"></div>
 
 										</div> 
 									</div> -->
-									<p>All Raid Boss have spawn time of 24H ± 1.</p>
+									<p>All Raid Bosses have spawn time of 24H ± 1.</p>
 									<table border="1" style="border-collapse: collapse;">
 								<tbody>
-
 												<tr style="height: 18px;">
 													<td style="width: 33%; height: 18px;"><span>Normal Raid Bosses</span></td>
 													<td style="width: 33%; height: 18px; text-align: left;"><span>Spawn Zone</span></td>
@@ -658,7 +638,6 @@ theme_color="#3b5998"></div>
 								</div>
 								<hr>
 							</div>
-						</div>
 						<div class="wiki__content" data-name-tab="premium">
 							<div class="wiki__content-title flex-sc">
 								<div class="wiki__content-title-icon flex-cc"><i class="ra ra-underhand"></i></div>
@@ -787,7 +766,7 @@ theme_color="#3b5998"></div>
 								<!-- </ul> -->
 							</div>
 						</div>
-<div class="wiki__content" data-name-tab="cs">
+						<div class="wiki__content" data-name-tab="cs">
 							<div class="wiki__content-title flex-sc">
 								<div class="wiki__content-title-icon flex-cc"><i class="ra ra-castle-emblem"></i></div>
 								<div class="wiki__content-title-info">
@@ -1058,9 +1037,9 @@ theme_color="#3b5998"></div>
                 <div class="footer__cpr-title">© 2023-2024 Project4</div>
                 <div class="footer__cpr-text">Game servers under GNU General Public License GPLv3.</div>
                      <div class="footer__cpr-links flex-sc">
-                  <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.htm#rules" target="_blank">game rules</a></div>
-                  <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.htm#privacypolicy" target="_blank">Terms & Conditions</a></div>
-                                    <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.htm#privacypolicy" target="_blank">Privacy Policy</a></div>
+                  <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.html#rules" target="_blank">game rules</a></div>
+                  <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.html#privacypolicy" target="_blank">Terms & Conditions</a></div>
+                                    <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.html#privacypolicy" target="_blank">Privacy Policy</a></div>
 
                      </div>
             </div>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -15,29 +16,11 @@
   <meta charset="utf-8">
   <!--prime:bb8d17b8-->
   <title>Project4 - Lineage 2</title>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Detect if the site is being run locally (file:// protocol)
-        const isLocal = window.location.protocol === "file:";
-        const baseURL = isLocal ? "" : "https://L2project4.com/";
-
-        // Select all anchor tags on the page
-        const anchorTags = document.querySelectorAll('a') || document.querySelectorAll('link');
-
-        // Loop through all the anchor tags and adjust the href
-        anchorTags.forEach(anchor => {
-            // If the href doesn't start with 'http' or 'https', prepend the base URL
-            if (anchor.getAttribute('href') && !anchor.getAttribute('href').startsWith('http')) {
-                anchor.setAttribute('href', baseURL + anchor.getAttribute('href'));
-            }
-        });
-    });
-  </script>
   <meta property="og:title" content="Project4 - Lineage 2">
   <meta property="og:site_name" content="L2Project4" >
   <meta property="robots" content="index,follow" >
   <meta property="og:type" content="website" >
-  <meta property="og:url" content="index.htm" >
+  <meta property="og:url" content="index.html" >
   <meta name="description" content= "L2 Project4." >
   <meta property="og:description" content="Project4 - Lineage 2, the highest quality gameplay." >
   <meta property="twitter:description" content="Project4 - highest quality Lineage 2 Private server." >
@@ -52,10 +35,10 @@
   <meta name="viewport" content="width=device-width" >
   <link rel="shortcut icon" href="main-page\4only.png" >
   <link rel="icon" href="main-page\4only.png" >
-  <link rel="stylesheet" href="scripts\main.css" >
-  <link rel="stylesheet" href="scripts\swiper.css" >
+  <link rel="stylesheet" href="https://predator.ge/css/main.css" >
+  <link rel="stylesheet" href="https://predator.ge/libs/swiper/swiper.css" >
   <link rel="apple-touch-icon" sizes="256x256" href="main-page\4only.png" >
-  <link rel="stylesheet" href="scripts\top.css" >
+  <link rel="stylesheet" href="https://predator.ge/css/top.css">
   <style>
      .preload {
      background-color: #1d1a19;
@@ -100,13 +83,13 @@ theme_color="#3b5998"></div>
       <div class="wrapper">
         <header class="header">
           <nav class="nav">
-            <div class="flex-sc content-area"><a href="index.htm" class="flex-cc nav__logo"><img alt="" src="main-page\4only.png"></a> 
+            <div class="flex-sc content-area"><a href="index.html" class="flex-cc nav__logo"><img alt="" src="main-page\4only.png"></a> 
               <div class="flex-sc nav__links">
-                 <div class="flex-cc nav__links-item"><a href="index.htm">home</a></div>
-                <div class="flex-cc nav__links-item"><a href="wiki.htm">WIKI</a></div>
-				 <div class="flex-cc nav__links-item"><a href="class.htm">GAMEPLAY</a></div>
-				  <div class="flex-cc nav__links-item"><a href="items.htm">ITEMS</a></div>
-                <div class="flex-cc nav__links-item"><a href="startgame.htm">START GAME</a></div>
+                 <div class="flex-cc nav__links-item"><a href="index.html">home</a></div>
+                <div class="flex-cc nav__links-item"><a href="wiki.html">WIKI</a></div>
+				 <div class="flex-cc nav__links-item"><a href="class.html">GAMEPLAY</a></div>
+				  <div class="flex-cc nav__links-item"><a href="items.html">ITEMS</a></div>
+                <div class="flex-cc nav__links-item"><a href="startgame.html">START GAME</a></div>
                 <div class="flex-cc nav__links-item"><a href="https://discord.gg/jG8GzyqGMy">DISCORD</a></div>
 				<div class="flex-cc nav__links-item"><a href="Vote Links here">VOTE FOR US</a></div>
               </div>
@@ -124,7 +107,7 @@ theme_color="#3b5998"></div>
             </div>
 			<div class="nav__langs-items flex-ss">
            
-            <a hreflang="en" href="index.htm" class="flex-sc">
+            <a hreflang="en" href="index.html" class="flex-sc">
             <div class="nav__langs-items-icon flex-cc"><img src="main-page\en.webp" alt=""></div>
             <div class="nav__langs-items-name">English</div>
             </a>
@@ -141,7 +124,7 @@ theme_color="#3b5998"></div>
           <div class="flex-cc header__box">
             <div class="header__content">
               <div class="flex-cc header__content-logo">
-                <div class="header__content-logo-left"></div><a href="index.htm" class="flex-cc header__content-logo-center"><img alt="" src="main-page\p4.png"></a>
+                <div class="header__content-logo-left"></div><a href="index.html" class="flex-cc header__content-logo-center"><img alt="" src="main-page\p4.png"></a>
                 <div class="header__content-logo-right"></div>
               </div>
               <div class="header__content-promo">
@@ -166,24 +149,24 @@ theme_color="#3b5998"></div>
 				<div class="section__title-left"></div>
 				<div class="section__title-center">
 					<div style="display: flex; gap: 10px; justify-content: center;">
-        <a href="items.htm" style="text-decoration: none;">
+        <a href="items.html" style="text-decoration: none;">
 	<button style="background: linear-gradient(135deg, #333, #1a1a1a); color: white; border: 2px solid #ff9933; padding: 15px 35px; width: 250px; text-align: center; cursor: pointer; font-size: 22px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: all 0.3s ease; font-family: 'Arial', sans-serif;">
 	Rare Items
     </button>
-	<a href="itemsb.htm" style="text-decoration: none;">
+	<a href="itemsb.html" style="text-decoration: none;">
 	<button style="background: linear-gradient(135deg, #333, #1a1a1a); color: white; border: 2px solid #ff9933; padding: 15px 35px; width: 250px; text-align: center; cursor: pointer; font-size: 22px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: all 0.3s ease; font-family: 'Arial', sans-serif;">
     Epic Items
     </button>
-	<a href="itemsa.htm" style="text-decoration: none;">
+	<a href="itemsa.html" style="text-decoration: none;">
 	<button style="background: linear-gradient(135deg, #333, #1a1a1a); color: white; border: 2px solid #ff9933; padding: 15px 35px; width: 250px; text-align: center; cursor: pointer; font-size: 22px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: all 0.3s ease; font-family: 'Arial', sans-serif;">
     Mythic Items
     </button>
 	</a>
-	<!-- <a href="legendary.htm" style="text-decoration: none;"> -->
-	<!-- <button style="background: linear-gradient(135deg, #333, #1a1a1a); color: white; border: 2px solid #ff9933; padding: 15px 35px; width: 250px; text-align: center; cursor: pointer; font-size: 22px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: all 0.3s ease; font-family: 'Arial', sans-serif;"> -->
-    <!-- Legendary Items -->
-    <!-- </button> -->
-	<!-- </a> -->
+	<a href="legendary.html" style="text-decoration: none;">
+	<button style="background: linear-gradient(135deg, #333, #1a1a1a); color: white; border: 2px solid #ff9933; padding: 15px 35px; width: 250px; text-align: center; cursor: pointer; font-size: 22px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: all 0.3s ease; font-family: 'Arial', sans-serif;">
+    Legendary Items
+    </button>
+	</a>
 </div>
 				</div>
 				<div class="section__title-right"></div>
@@ -221,7 +204,7 @@ theme_color="#3b5998"></div>
 								<div class="wiki__nav-item-name">Weapons</div>
 								<div class="wiki__nav-item-desc">Mythic Weapons Stat Description </div>
 							</div>
-						</a> 
+						</a>
 						<a href="#" class="wiki__nav-item flex-sc" data-open-tab="jewel">
 							<div class="wiki__nav-item-icon flex-cc"><i class="ra ra-feather-wing"></i></div>
 							<div class="wiki__nav-item-info">
@@ -238,7 +221,7 @@ theme_color="#3b5998"></div>
 								<div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
 								<div class="wiki__content-title-info">
 									<div class="wiki__content-title-name">Mythic Heavy Armors</div>
-									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;"> These formidable items are incredibly rare and can be obtained through Crafting or Grand Raid Boss Drops. Visit Mammons in any town to explore the recipes and materials required. Mythic armor sets offer unique, optional bonuses that enhance both PvP and PvE performance, especially when paired with specific weapons. These sets can also be used with lower-grade weapons of the same type, giving you flexibility in combat. Dominate your enemies in PvP and thrive in PvE with the power of Mythic armor.</div>
+									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">These items are very difficult to obtain, aviable via Crafting & Grand Raid Boss Drop. Visit Mammons in any town in order to see the recipes and materials needed. All Mythic armor sets have Optional set stats with specific Weapons, can be used with lower grade weapon of the same type.</div>
 								</div>
 								
 							</div>	
@@ -445,8 +428,8 @@ theme_color="#3b5998"></div>
 		<div class="wiki__content-title flex-sc">
 								<div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
 								<div class="wiki__content-title-info">
-									<div class="wiki__content-title-name">Mythic Light Armors</div>
-									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">These formidable items are incredibly rare and can be obtained through Crafting or Grand Raid Boss Drops. Visit Mammons in any town to explore the recipes and materials required. Mythic armor sets offer unique, optional bonuses that enhance both PvP and PvE performance, especially when paired with specific weapons. These sets can also be used with lower-grade weapons of the same type, giving you flexibility in combat. Dominate your enemies in PvP and thrive in PvE with the power of Mythic armor.</div>
+									<div class="wiki__content-title-name">Epic Light Armors</div>
+									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">These items are aviable via Crafting, Grand & Raid Boss Drop. Visit Mammons in any town in order to see the recipes and materials needed. All Epic armor sets have Optional set stats with specific Weapons, can be used with Higher grade weapon of the same type.</div>
 								</div>
 								
 							</div>				
@@ -648,8 +631,8 @@ SET NIGHTMARE.</p>
 			<div class="wiki__content-title flex-sc">
 								<div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
 								<div class="wiki__content-title-info">
-									<div class="wiki__content-title-name">Mythic Robe Armors</div>
-									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">These formidable items are incredibly rare and can be obtained through Crafting or Grand Raid Boss Drops. Visit Mammons in any town to explore the recipes and materials required. Mythic armor sets offer unique, optional bonuses that enhance both PvP and PvE performance, especially when paired with specific weapons. These sets can also be used with lower-grade weapons of the same type, giving you flexibility in combat. Dominate your enemies in PvP and thrive in PvE with the power of Mythic armor.</div>
+									<div class="wiki__content-title-name">Epic Robe Armors</div>
+									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">These items are aviable via Crafting, Grand & Raid Boss Drop. Visit Mammons in any town in order to see the recipes and materials needed. All Epic armor sets have Optional set stats with specific Weapons. All Epic armor sets can have optional set with specific weapons of same type.</div>
 								</div>
 								
 							</div>											
@@ -850,7 +833,7 @@ SET NIGHTMARE.</p>
 								<div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
 								<div class="wiki__content-title-info">
 									<div class="wiki__content-title-name">Mythic Weapons</div>
-									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">Mythic weapons are among the most powerful tools a warrior can wield, obtained through Crafting and Grand Raid Boss Drops. Visit Mammons in any town to discover the necessary recipes and materials. These weapons provide exceptional bonuses for both PvP and PvE, making them ideal for players looking to dominate the battlefield. Mythic weapons can be paired with lower-grade armor sets of the same type, giving you versatile options in any combat situation. Unleash devastating power and secure victory in both PvP and PvE with Mythic weapons in your arsenal.</div>
+									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">These items are aviable via Crafting, Grand & Raid Boss Drop. Visit Mammons in any town in order to see the recipes and materials needed. All Epic armor sets have Optional set stats with specific Weapons. All Epic armor sets can have optional set with specific weapons of same type.</div>
 								</div>
 								
 							</div>	
@@ -1154,8 +1137,8 @@ SET NIGHTMARE.</p>
 			<div class="wiki__content-title flex-sc">
 								<div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
 								<div class="wiki__content-title-info">
-									<div class="wiki__content-title-name">Mythic Jewelery</div>
-									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">Mythic Jewelry provides exceptional enhancements for both PvP and PvE, making it a prized possession for any adventurer. These items are obtainable through Crafting and Grand Raid Boss Drops. Visit Mammons in any town to discover the materials and recipes required to craft them. Mythic Jewelry offers unique stats tailored to improve your combat efficiency and performance. While these powerful accessories can be combined with other gear, their effects do not stack with higher or lower grade jewels of the same type, ensuring you make the most of their strength in battle.</div>
+									<div class="wiki__content-title-name">Epic Jewelery</div>
+									<div style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">These items are aviable via Crafting, Grand & Raid Boss Drop. Visit Mammons in any town in order to see the recipes and materials needed. All Epic armor sets have Optional set stats with specific Weapons. All Epic armor sets can have optional set with specific weapons of same type.</div>
 								</div>
 								
 							</div>											
@@ -1170,7 +1153,7 @@ SET NIGHTMARE.</p>
                     <!-- Title Styled like Blue Wolf Set -->
                     <span style="font-size: 24px; font-weight: bold; color: #ff9933;">Majestic Dragon Necklace:</span>
                     <!-- Image next to title -->
-                    <img src="items\armors\jewels\valakamythic.png" alt="Great Pata Icon" style="width: 45px; height: 45px;">
+                    <img src="items\armors\hatch.png" alt="Great Pata Icon" style="width: 45px; height: 45px;">
                 </div>
 
                 <!-- Description and Optimal For -->
@@ -1186,7 +1169,7 @@ SET NIGHTMARE.</p>
                     <!-- Title Styled like Blue Wolf Set -->
                     <span style="font-size: 24px; font-weight: bold; color: #ff9933;">Sonata's Necklace</span>
                     <!-- Image next to title -->
-                    <img src="items\armors\jewels\tezzamythic.png" alt="Great Pata Icon" style="width: 45px; height: 45px;">
+                    <img src="items\armors\tezzaa.png" alt="Great Pata Icon" style="width: 45px; height: 45px;">
                 </div>
 
                 <!-- Description and Optimal For -->
@@ -1205,7 +1188,7 @@ SET NIGHTMARE.</p>
                     <!-- Title Styled like Blue Wolf Set -->
                     <span style="font-size: 24px; font-weight: bold; color: #ff9933;">Hatchling Earring:</span>
                     <!-- Image next to title -->
-                    <img src="items\armors\jewels\antharamythic.png" alt="Great Pata Icon" style="width: 45px; height: 45px;">
+                    <img src="items\armors\antha.png" alt="Great Pata Icon" style="width: 45px; height: 45px;">
                 </div>
 				
                 <!-- Description and Optimal For -->
@@ -1221,7 +1204,7 @@ SET NIGHTMARE.</p>
                     <!-- Title Styled like Blue Wolf Set -->
                     <span style="font-size: 24px; font-weight: bold; color: #ff9933;">Pirate's Earring:</span>
                     <!-- Image next to title -->
-                    <img src="items\armors\jewels\zakenmythic.png" alt="Great Pata Icon" style="width: 45px; height: 45px;">
+                    <img src="items\armors\zakena.png" alt="Great Pata Icon" style="width: 45px; height: 45px;">
                 </div>
 
                 <!-- Description and Optimal For -->
@@ -1239,7 +1222,7 @@ SET NIGHTMARE.</p>
                     <!-- Title Styled like Blue Wolf Set -->
                     <span style="font-size: 24px; font-weight: bold; color: #ff9933;">Earring of Thalassa:</span>
                     <!-- Image next to title -->
-                    <img src="items\armors\jewels\orfenmythic.png" alt="Great Pata Icon" style="width: 45px; height: 45px;">
+                    <img src="items\armors\orfena.png" alt="Great Pata Icon" style="width: 45px; height: 45px;">
                 </div>
 
                 <!-- Description and Optimal For -->
@@ -1255,7 +1238,7 @@ SET NIGHTMARE.</p>
                     <!-- Title Styled like Blue Wolf Set -->
                     <span style="font-size: 24px; font-weight: bold; color: #ff9933;">Ring of Abyss:</span>
                     <!-- Image next to title -->
-                    <img src="items\armors\jewels\coremythic.png" alt="Great Pata Icon" style="width: 45px; height: 45px;">
+                    <img src="items\armors\corea.png" alt="Great Pata Icon" style="width: 45px; height: 45px;">
                 </div>
 
                 <!-- Description and Optimal For -->
@@ -1273,7 +1256,7 @@ SET NIGHTMARE.</p>
                     <!-- Title Styled like Blue Wolf Set -->
                     <span style="font-size: 24px; font-weight: bold; color: #ff9933;">Tower's Stolen Ring:</span>
                     <!-- Image next to title -->
-                    <img src="items\armors\jewels\baiummythic.png" alt="Great Pata Icon" style="width: 45px; height: 45px;">
+                    <img src="items\armors\baiuma.png" alt="Great Pata Icon" style="width: 45px; height: 45px;">
                 </div>
 
                 <!-- Description and Optimal For -->
@@ -1289,7 +1272,7 @@ SET NIGHTMARE.</p>
                     <!-- Title Styled like Blue Wolf Set -->
                     <span style="font-size: 24px; font-weight: bold; color: #ff9933;">Queen's Mercenary Ring:</span>
                     <!-- Image next to title -->
-                    <img src="items\armors\jewels\aqmythic.png" alt="Great Pata Icon" style="width: 45px; height: 45px;">
+                    <img src="items\armors\qaa.png" alt="Great Pata Icon" style="width: 45px; height: 45px;">
                 </div>
 
                 <!-- Description and Optimal For -->
@@ -1316,9 +1299,9 @@ SET NIGHTMARE.</p>
                 <div class="footer__cpr-title">© 2023-2024 Project4</div>
                 <div class="footer__cpr-text">Game servers under GNU General Public License GPLv3.</div>
                      <div class="footer__cpr-links flex-sc">
-                 <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.htm#rules" target="_blank">game rules</a></div>
-                  <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.htm#privacypolicy" target="_blank">Terms & Conditions</a></div>
-                                    <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.htm#privacypolicy" target="_blank">Privacy Policy</a></div>
+                 <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.html#rules" target="_blank">game rules</a></div>
+                  <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.html#privacypolicy" target="_blank">Terms & Conditions</a></div>
+                                    <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.html#privacypolicy" target="_blank">Privacy Policy</a></div>
 
                      </div>
             </div>
