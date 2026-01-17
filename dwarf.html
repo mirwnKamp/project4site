@@ -38,6 +38,7 @@
     <link rel="icon" href="main-page\4only.png">
     <link rel="stylesheet" href="scripts/main.css">
     <link rel="stylesheet" href="scripts/swiper.css">
+    <link rel="stylesheet" href="scripts/raceScroll.css">
     <link rel="apple-touch-icon" sizes="256x256" href="main-page\4only.png">
     <link rel="stylesheet" href="scripts/top.css">
     <style>
@@ -145,381 +146,368 @@
         <section class="section inner-page">
             <div class="section__title flex-cc">
                 <div class="section__title-left"></div>
-                <div class="section__title-center">
-                    <div style="display: flex; gap: 10px; justify-content: center;">
-                        <a href="class.html" style="text-decoration: none;">
-                            <button
-                                style="background: linear-gradient(135deg, #333, #1a1a1a); color: white; border: 2px solid #ff9933; padding: 15px 35px; width: 170px; text-align: center; cursor: pointer; font-size: 22px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: all 0.3s ease; font-family: 'Arial', sans-serif;">
-                                Human
-                            </button>
-                            <a href="elf.html" style="text-decoration: none;">
-                                <button
-                                    style="background: linear-gradient(135deg, #333, #1a1a1a); color: white; border: 2px solid #ff9933; padding: 15px 35px; width: 170px; text-align: center; cursor: pointer; font-size: 22px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: all 0.3s ease; font-family: 'Arial', sans-serif;">
-                                    Elf
-                                </button>
-                                <a href="darkElf.html" style="text-decoration: none;">
-                                    <button
-                                        style="background: linear-gradient(135deg, #333, #1a1a1a); color: white; border: 2px solid #ff9933; padding: 15px 35px; width: 170px; text-align: center; cursor: pointer; font-size: 22px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: all 0.3s ease; font-family: 'Arial', sans-serif;">
-                                        Dark Elf
-                                    </button>
-                                    <a href="orc.html" style="text-decoration: none;">
 
-                                        <button
-                                            style="background: linear-gradient(135deg, #333, #1a1a1a); color: white; border: 2px solid #ff9933; padding: 15px 35px; width: 170px; text-align: center; cursor: pointer; font-size: 22px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: all 0.3s ease; font-family: 'Arial', sans-serif;">
-                                            Orc
-                                        </button>
-                                        <a href="dwarf.html" style="text-decoration: none;">
-                                            <button
-                                                style="background: linear-gradient(135deg, #333, #1a1a1a); color: white; border: 2px solid #ff9933; padding: 15px 35px; width: 170px; text-align: center; cursor: pointer; font-size: 22px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); transition: all 0.3s ease; font-family: 'Arial', sans-serif;">
-                                                Dwarf
-                                            </button>
-                                        </a>
+                <div class="section__title-center race-container">
+                    <div class="raceSwiper swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide"><a href="class.html" class="race-btn">Human</a></div>
+                            <div class="swiper-slide"><a href="elf.html" class="race-btn">Elf</a></div>
+                            <div class="swiper-slide"><a href="darkElf.html" class="race-btn">Dark Elf</a></div>
+                            <div class="swiper-slide"><a href="orc.html" class="race-btn">Orc</a></div>
+                            <div class="swiper-slide"><a href="dwarf.html" class="race-btn active">Dwarf</a></div>
+
+                        </div>
                     </div>
                 </div>
+
                 <div class="section__title-right"></div>
-                <div class="section__title-small"></div>
             </div>
-            <div class="content-area">
-                <div class="wiki flex-sbs">
+    </div>
+    <div class="section__title-right"></div>
+    <div class="section__title-small"></div>
+    </div>
+    <div class="content-area">
+        <div class="wiki flex-sbs">
 
-                    <div class="wiki__nav">
-                        <a href="#" class="wiki__nav-item flex-sc" data-open-tab="spoiler">
-                            <div class="wiki__nav-item-icon flex-cc"><i class="ra ra-dervish-swords"></i></div>
-                            <div class="wiki__nav-item-info">
-                                <div class="wiki__nav-item-name">Fortune Seeker</div>
-                                <div class="wiki__nav-item-desc">Fortune Seeker New Description of skills</div>
-                            </div>
-                        </a>
-                        <a href="#" class="wiki__nav-item flex-sc" data-open-tab="crafter">
-                            <div class="wiki__nav-item-icon flex-cc"><i class="ra ra-scroll-unfurled"></i></div>
-                            <div class="wiki__nav-item-info">
-                                <div class="wiki__nav-item-name">Maestro</div>
-                                <div class="wiki__nav-item-desc">Maestro New Description of skills</div>
-                            </div>
-                        </a>
+            <div class="wiki__nav">
+                <a href="#" class="wiki__nav-item flex-sc" data-open-tab="spoiler">
+                    <div class="wiki__nav-item-icon flex-cc"><i class="ra ra-dervish-swords"></i></div>
+                    <div class="wiki__nav-item-info">
+                        <div class="wiki__nav-item-name">Fortune Seeker</div>
+                        <div class="wiki__nav-item-desc">Fortune Seeker New Description of skills</div>
                     </div>
-                    <div class="wiki__box">
-
-                        <div class="wiki__content" data-name-tab="spoiler">
-                            <div class="wiki__content-title flex-sc">
-                                <div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
-                                <div class="wiki__content-title-info">
-                                    <div class="wiki__content-title-name">Fortune Seeker</div>
-                                    <div
-                                        style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">
-                                        is a treasure hunter who harnesses the raw power of a Titan while utilizing the
-                                        spoil skill to gather valuable resources. Known for their ability to deal
-                                        tremendous physical damage in close combat, Fortune Seekers also possess skills
-                                        to enhance their loot collection, making them ideal for farming rare materials
-                                        and spoils from defeated enemies. Their role in battle is to crush opponents
-                                        with heavy blows while securing valuable items for crafting. Combining strength,
-                                        treasure hunting, and crafting potential, the Fortune Seeker is a versatile
-                                        class that thrives in both PvE and group play.</div>
-                                </div>
-
-                            </div>
-                            <div
-                                style="font-family: 'Arial', sans-serif; font-size: 18px; line-height: 1.6; color: #fff;">
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\dwarf\craft.png" alt="Chain Strike Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Create
-                                            Item:</span>
-                                        <p style="margin: 0;">Fortune Seeker can craft items Up to B grade. </p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\dwarf\crystal.png" alt="Chain Strike Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Crystalize:</span>
-                                        <p style="margin: 0;">Fortune Seeker can Crystalize items Up to C grade. </p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\dwarf\buff.png" alt="Chain Strike Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Coin
-                                            of Luck:</span>
-                                        <p style="margin: 0;">Each party member will recieve a random set of effects
-                                            based on a coin flip. Increased P./M. Attak and P./M. Skill Power OR
-                                            Increased Head size and P./M. Def. Consumes 96540 Adena. Requires a blunt or
-                                            two-handed blunt weapon.</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\dwarf\coin.png" alt="Chain Strike Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Coin
-                                            Strike:</span>
-                                        <p style="margin: 0;">Throws a fistful of coins at the enemy infront of you that
-                                            deals damage.</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\orc\titan\rage.png" alt="Chain Hydra Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Rage:</span>
-                                        <p style="margin: 0;">For 10min Increases P. Attack. Can be learned with maximum
-                                            of lvl 2.</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\dwarf\twohand.png" alt="Chain Hydra Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Two-handed
-                                            Weapon Mastery:</span>
-                                        <p style="margin: 0;">Increases P. Attack while using two handed sword or blunt
-                                            weapon.</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\human\warlord\eye.png" alt="Noble Sacrifice Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Eye
-                                            of Slayer:</span>
-                                        <p style="margin: 0;">For 10min. Increase PvE Damage +3%.</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\human\warlord\brave.png" alt="Chain Hydra Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Braveheart:</span>
-                                        <p style="margin: 0;">Very fast skill that Increase CP by 2000.</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\human\gladiator\disarm.png" alt="Noble Sacrifice Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Disarm:</span>
-                                        <p style="margin: 0;">Disarms the enemy for 5second. Requires blunt, spear, fist
-                                            or dual swords.</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\dwarf\jump.png" alt="Chain Hydra Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Jump
-                                            Attack:</span>
-                                        <p style="margin: 0;">Jumps to attack frontal enemy deals damage and decreases
-                                            their speed by 180 for 5 sec. Requires blunt or spear weapon.</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\human\warlord\honor.png" alt="Noble Sacrifice Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Symbol
-                                            of Honor:</span>
-                                        <p style="margin: 0;">Creates a seal that maximizes HP/CP regeneration of nearby
-                                            Allies. The seal's effect disappears upon leaving the area. Consumes 11
-                                            Battle Symbol. The skill cooldown is fixed.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wiki__content" data-name-tab="crafter">
-                            <div class="wiki__content-title flex-sc">
-                                <div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
-                                <div class="wiki__content-title-info">
-                                    <div class="wiki__content-title-name">Maestro</div>
-                                    <div
-                                        style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">
-                                        is a master craftsman and warrior, combining the strength of a Titan with the
-                                        unique ability to craft and build powerful siege weapons. As a formidable tank
-                                        and damage dealer, Maestros excel in close combat, using their strong physical
-                                        prowess to withstand heavy blows while dealing devastating damage. Their
-                                        crafting abilities make them invaluable in creating high-quality weapons, armor,
-                                        and items, while their spoil skill allows them to gather rare materials from
-                                        enemies. The Maestro is a unique blend of brute force and crafting expertise,
-                                        making them essential in both battle and resource gathering.</div>
-                                </div>
-
-                            </div>
-                            <div
-                                style="font-family: 'Arial', sans-serif; font-size: 18px; line-height: 1.6; color: #fff;">
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\dwarf\spoil.png" alt="Chain Strike Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Spoil
-                                            Festival:</span>
-                                        <p style="margin: 0;">Maestro now can learn Spoil Festival skill. </p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\dwarf\sweep.png" alt="Chain Strike Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Mass
-                                            Sweeper:</span>
-                                        <p style="margin: 0;">Maestro now can learn Mass Sweeper skill. </p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\dwarf\buff.png" alt="Chain Strike Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Coin
-                                            of Luck:</span>
-                                        <p style="margin: 0;">Each party member will recieve a random set of effects
-                                            based on a coin flip. Increased P./M. Attak and P./M. Skill Power OR
-                                            Increased Head size and P./M. Def. Consumes 96540 Adena. Requires a blunt or
-                                            two-handed blunt weapon.</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\dwarf\coin.png" alt="Chain Strike Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Coin
-                                            Strike:</span>
-                                        <p style="margin: 0;">Throws a fistful of coins at the enemy infront of you that
-                                            deals damage.</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\orc\titan\rage.png" alt="Chain Hydra Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Rage:</span>
-                                        <p style="margin: 0;">For 10min Increases P. Attack. Can be learned with maximum
-                                            of lvl 2.</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\dwarf\twohand.png" alt="Chain Hydra Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Two-handed
-                                            Weapon Mastery:</span>
-                                        <p style="margin: 0;">Increases P. Attack while using two handed sword or blunt
-                                            weapon.</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\human\warlord\eye.png" alt="Noble Sacrifice Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Eye
-                                            of Slayer:</span>
-                                        <p style="margin: 0;">For 10min. Increase PvE Damage +3%.</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\human\warlord\brave.png" alt="Chain Hydra Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Braveheart:</span>
-                                        <p style="margin: 0;">Very fast skill that Increase CP by 2000.</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\human\gladiator\disarm.png" alt="Noble Sacrifice Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Disarm:</span>
-                                        <p style="margin: 0;">Disarms the enemy for 5second. Requires blunt, spear, fist
-                                            or dual swords.</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\dwarf\jump.png" alt="Chain Hydra Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Jump
-                                            Attack:</span>
-                                        <p style="margin: 0;">Jumps to attack frontal enemy deals damage and decreases
-                                            their speed by 180 for 5 sec. Requires blunt or spear weapon.</p>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                    <img src="class-page\dwarf\honor.png" alt="Noble Sacrifice Icon"
-                                        style="width: 50px; height: 50px; margin-right: 10px;">
-                                    <div>
-                                        <span
-                                            style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Symbol
-                                            of Honor:</span>
-                                        <p style="margin: 0;">Creates a seal that maximizes HP/CP regeneration of nearby
-                                            allies. The seal's effect disappears upon leaving the area. Consumes 1
-                                            Battle Symbol. The skill cooldown is fixed.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        </section>
-        <div class="progress-wrap"><svg class="progress-circle svg-content" width="100%" height="100%"
-                viewBox="-1 -1 102 102">
-                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-            </svg></div>
-        <footer class="footer33">
-            <div class="footer33__logo flex-cc">
-                <div class="footer33__logo-right"></div>
-                <div class="footer33__logo-center flex-cc">
-                    <img src="main-page\p4.png" alt="">
-                </div>
-                <div class="footer33__logo-left"></div>
+                </a>
+                <a href="#" class="wiki__nav-item flex-sc" data-open-tab="crafter">
+                    <div class="wiki__nav-item-icon flex-cc"><i class="ra ra-scroll-unfurled"></i></div>
+                    <div class="wiki__nav-item-info">
+                        <div class="wiki__nav-item-name">Maestro</div>
+                        <div class="wiki__nav-item-desc">Maestro New Description of skills</div>
+                    </div>
+                </a>
             </div>
-            <div class="content-area flex-ss">
-                <div class="col-1-2">
-                    <div class="footer__cpr">
-                        <div class="footer__cpr-title">© 2023-2024 Project4</div>
-                        <div class="footer__cpr-text">Game servers under GNU General Public License GPLv3.</div>
-                        <div class="footer__cpr-links flex-sc">
-                            <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.html#rules"
-                                    target="_blank">game rules</a></div>
-                            <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.html#privacypolicy"
-                                    target="_blank">Terms & Conditions</a></div>
-                            <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.html#privacypolicy"
-                                    target="_blank">Privacy Policy</a></div>
+            <div class="wiki__box">
 
+                <div class="wiki__content" data-name-tab="spoiler">
+                    <div class="wiki__content-title flex-sc">
+                        <div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
+                        <div class="wiki__content-title-info">
+                            <div class="wiki__content-title-name">Fortune Seeker</div>
+                            <div
+                                style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">
+                                is a treasure hunter who harnesses the raw power of a Titan while utilizing the
+                                spoil skill to gather valuable resources. Known for their ability to deal
+                                tremendous physical damage in close combat, Fortune Seekers also possess skills
+                                to enhance their loot collection, making them ideal for farming rare materials
+                                and spoils from defeated enemies. Their role in battle is to crush opponents
+                                with heavy blows while securing valuable items for crafting. Combining strength,
+                                treasure hunting, and crafting potential, the Fortune Seeker is a versatile
+                                class that thrives in both PvE and group play.</div>
+                        </div>
+
+                    </div>
+                    <div style="font-family: 'Arial', sans-serif; font-size: 18px; line-height: 1.6; color: #fff;">
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\dwarf\craft.png" alt="Chain Strike Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Create
+                                    Item:</span>
+                                <p style="margin: 0;">Fortune Seeker can craft items Up to B grade. </p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\dwarf\crystal.png" alt="Chain Strike Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Crystalize:</span>
+                                <p style="margin: 0;">Fortune Seeker can Crystalize items Up to C grade. </p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\dwarf\buff.png" alt="Chain Strike Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Coin
+                                    of Luck:</span>
+                                <p style="margin: 0;">Each party member will recieve a random set of effects
+                                    based on a coin flip. Increased P./M. Attak and P./M. Skill Power OR
+                                    Increased Head size and P./M. Def. Consumes 96540 Adena. Requires a blunt or
+                                    two-handed blunt weapon.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\dwarf\coin.png" alt="Chain Strike Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Coin
+                                    Strike:</span>
+                                <p style="margin: 0;">Throws a fistful of coins at the enemy infront of you that
+                                    deals damage.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\orc\titan\rage.png" alt="Chain Hydra Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Rage:</span>
+                                <p style="margin: 0;">For 10min Increases P. Attack. Can be learned with maximum
+                                    of lvl 2.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\dwarf\twohand.png" alt="Chain Hydra Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Two-handed
+                                    Weapon Mastery:</span>
+                                <p style="margin: 0;">Increases P. Attack while using two handed sword or blunt
+                                    weapon.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\human\warlord\eye.png" alt="Noble Sacrifice Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Eye
+                                    of Slayer:</span>
+                                <p style="margin: 0;">For 10min. Increase PvE Damage +3%.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\human\warlord\brave.png" alt="Chain Hydra Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Braveheart:</span>
+                                <p style="margin: 0;">Very fast skill that Increase CP by 2000.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\human\gladiator\disarm.png" alt="Noble Sacrifice Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Disarm:</span>
+                                <p style="margin: 0;">Disarms the enemy for 5second. Requires blunt, spear, fist
+                                    or dual swords.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\dwarf\jump.png" alt="Chain Hydra Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Jump
+                                    Attack:</span>
+                                <p style="margin: 0;">Jumps to attack frontal enemy deals damage and decreases
+                                    their speed by 180 for 5 sec. Requires blunt or spear weapon.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\human\warlord\honor.png" alt="Noble Sacrifice Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Symbol
+                                    of Honor:</span>
+                                <p style="margin: 0;">Creates a seal that maximizes HP/CP regeneration of nearby
+                                    Allies. The seal's effect disappears upon leaving the area. Consumes 11
+                                    Battle Symbol. The skill cooldown is fixed.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+                <div class="wiki__content" data-name-tab="crafter">
+                    <div class="wiki__content-title flex-sc">
+                        <div class="wiki__content-title-icon flex-cc"><i class="ra ra-stopwatch"></i></div>
+                        <div class="wiki__content-title-info">
+                            <div class="wiki__content-title-name">Maestro</div>
+                            <div
+                                style="font-family: 'Arial', sans-serif; font-size: 13px; line-height: 1.6; color: #ff9933;">
+                                is a master craftsman and warrior, combining the strength of a Titan with the
+                                unique ability to craft and build powerful siege weapons. As a formidable tank
+                                and damage dealer, Maestros excel in close combat, using their strong physical
+                                prowess to withstand heavy blows while dealing devastating damage. Their
+                                crafting abilities make them invaluable in creating high-quality weapons, armor,
+                                and items, while their spoil skill allows them to gather rare materials from
+                                enemies. The Maestro is a unique blend of brute force and crafting expertise,
+                                making them essential in both battle and resource gathering.</div>
+                        </div>
 
-        <link rel="stylesheet" href="scripts\fontawesome.css">
-        <script src="scripts\jquery.min.js"></script>
-        <script src="scripts\navigation.js"></script>
-        <script src="scripts\timers.js"></script>
-        <script src="scripts\swiper.js"></script>
-        <script src="scripts\MVisionToggleClass.js"></script>
-        <script src="scripts\wiki.js"></script>
-        <script src="scripts\tablesizer.js"></script>
-        <script src="scripts\scripts.js"></script>
-        <script src="scripts\streams.js"></script>
-        <script src="scripts\top.js"></script>
+                    </div>
+                    <div style="font-family: 'Arial', sans-serif; font-size: 18px; line-height: 1.6; color: #fff;">
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\dwarf\spoil.png" alt="Chain Strike Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Spoil
+                                    Festival:</span>
+                                <p style="margin: 0;">Maestro now can learn Spoil Festival skill. </p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\dwarf\sweep.png" alt="Chain Strike Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Mass
+                                    Sweeper:</span>
+                                <p style="margin: 0;">Maestro now can learn Mass Sweeper skill. </p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\dwarf\buff.png" alt="Chain Strike Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Coin
+                                    of Luck:</span>
+                                <p style="margin: 0;">Each party member will recieve a random set of effects
+                                    based on a coin flip. Increased P./M. Attak and P./M. Skill Power OR
+                                    Increased Head size and P./M. Def. Consumes 96540 Adena. Requires a blunt or
+                                    two-handed blunt weapon.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\dwarf\coin.png" alt="Chain Strike Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Coin
+                                    Strike:</span>
+                                <p style="margin: 0;">Throws a fistful of coins at the enemy infront of you that
+                                    deals damage.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\orc\titan\rage.png" alt="Chain Hydra Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Rage:</span>
+                                <p style="margin: 0;">For 10min Increases P. Attack. Can be learned with maximum
+                                    of lvl 2.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\dwarf\twohand.png" alt="Chain Hydra Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Two-handed
+                                    Weapon Mastery:</span>
+                                <p style="margin: 0;">Increases P. Attack while using two handed sword or blunt
+                                    weapon.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\human\warlord\eye.png" alt="Noble Sacrifice Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Eye
+                                    of Slayer:</span>
+                                <p style="margin: 0;">For 10min. Increase PvE Damage +3%.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\human\warlord\brave.png" alt="Chain Hydra Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Braveheart:</span>
+                                <p style="margin: 0;">Very fast skill that Increase CP by 2000.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\human\gladiator\disarm.png" alt="Noble Sacrifice Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Disarm:</span>
+                                <p style="margin: 0;">Disarms the enemy for 5second. Requires blunt, spear, fist
+                                    or dual swords.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\dwarf\jump.png" alt="Chain Hydra Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Jump
+                                    Attack:</span>
+                                <p style="margin: 0;">Jumps to attack frontal enemy deals damage and decreases
+                                    their speed by 180 for 5 sec. Requires blunt or spear weapon.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <img src="class-page\dwarf\honor.png" alt="Noble Sacrifice Icon"
+                                style="width: 50px; height: 50px; margin-right: 10px;">
+                            <div>
+                                <span
+                                    style="font-size: 22px; font-weight: bold; border-bottom: 2px solid #ff9933; display: inline-block; padding-bottom: 5px;">Symbol
+                                    of Honor:</span>
+                                <p style="margin: 0;">Creates a seal that maximizes HP/CP regeneration of nearby
+                                    allies. The seal's effect disappears upon leaving the area. Consumes 1
+                                    Battle Symbol. The skill cooldown is fixed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+                <div class="progress-wrap"><svg class="progress-circle svg-content" width="100%" height="100%"
+                        viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+                    </svg></div>
+                <footer class="footer33">
+                    <div class="footer33__logo flex-cc">
+                        <div class="footer33__logo-right"></div>
+                        <div class="footer33__logo-center flex-cc">
+                            <img src="main-page\p4.png" alt="">
+                        </div>
+                        <div class="footer33__logo-left"></div>
+                    </div>
+                    <div class="content-area flex-ss">
+                        <div class="col-1-2">
+                            <div class="footer__cpr">
+                                <div class="footer__cpr-title">© 2023-2024 Project4</div>
+                                <div class="footer__cpr-text">Game servers under GNU General Public License GPLv3.</div>
+                                <div class="footer__cpr-links flex-sc">
+                                    <div class="footer__cpr-links-item"><a href="https://l2project4.com/wiki.html#rules"
+                                            target="_blank">game rules</a></div>
+                                    <div class="footer__cpr-links-item"><a
+                                            href="https://l2project4.com/wiki.html#privacypolicy" target="_blank">Terms
+                                            & Conditions</a></div>
+                                    <div class="footer__cpr-links-item"><a
+                                            href="https://l2project4.com/wiki.html#privacypolicy"
+                                            target="_blank">Privacy Policy</a></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+                <link rel="stylesheet" href="scripts\fontawesome.css">
+                <script src="scripts\jquery.min.js"></script>
+                <script src="scripts\navigation.js"></script>
+                <script src="scripts\timers.js"></script>
+                <script src="scripts\swiper.js"></script>
+                <script src="scripts\MVisionToggleClass.js"></script>
+                <script src="scripts\wiki.js"></script>
+                <script src="scripts\tablesizer.js"></script>
+                <script src="scripts\scripts.js"></script>
+                <script src="scripts\streams.js"></script>
+                <script src="scripts\top.js"></script>
 </body>
 
 </html>
