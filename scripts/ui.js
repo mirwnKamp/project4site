@@ -2,16 +2,24 @@
 // race switching without page reloads, scroll reveal.
 (function () {
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var page = function () { return location.pathname.split('/').pop() || 'index.html'; };
-  var racePages = ['class.html', 'elf.html', 'darkElf.html', 'dwarf.html', 'orc.html'];
+  // Pages are linked without ".html" (GitHub Pages serves /items as items.html). Names here are clean too.
+  var clean = function (path) { var n = path.split('#')[0].split('?')[0].split('/').pop().replace(/\.html$/, ''); return n || 'index'; };
+  var page = function () { return clean(location.pathname); };
+  var racePages = ['class', 'elf', 'darkElf', 'dwarf', 'orc'];
+  // Old links and bookmarks still open /items.html: show the clean address instead.
+  if (/^https?:$/.test(location.protocol) && /\.html$/.test(location.pathname) && history.replaceState) {
+    history.replaceState(history.state, '', location.pathname.replace(/index\.html$/, '').replace(/\.html$/, '') + location.search + location.hash);
+  }
   // Same options wiki.js passes to the tab plugin; needed again when a race swaps in new tabs.
   var tabOptions = { classButton: 'wiki__nav-item', toggleClassButton: 'active', dataButtonAttr: 'data-open-tab', classBox: 'wiki__content',
     toggleClassBox: 'active', dataBoxAttr: 'data-name-tab', defaultElement: true, defaultIndexElement: 0, ancoreLinks: true };
 
   document.querySelectorAll('.nav__links-item').forEach(function (item, i) {
     item.style.setProperty('--i', i);
-    var a = item.querySelector('a'), href = a && (a.getAttribute('href') || '').split('/').pop();
-    if (href && (href === page() || (href === 'class.html' && racePages.indexOf(page()) >= 0))) a.classList.add('is-current');
+    var a = item.querySelector('a'), raw = a && a.getAttribute('href');
+    if (!raw || /^(https?:)?\/\//.test(raw)) return;
+    var href = clean(raw);
+    if (href === page() || (href === 'class' && racePages.indexOf(page()) >= 0)) a.classList.add('is-current');
   });
 
   function scrollStrip(strip, el, smooth) {
@@ -116,7 +124,7 @@
     // Back/forward: follow the URL (tab clicks add #hash entries without our state, so read the path).
     window.addEventListener('popstate', function () {
       var p = page(), cur = activeBtn();
-      if (racePages.indexOf(p) >= 0 && cur && cur.getAttribute('href') !== p) go(p, false);
+      if (racePages.indexOf(p) >= 0 && cur && clean(cur.getAttribute('href')) !== p) go(p, false);
     });
   }
 
