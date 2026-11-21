@@ -47,14 +47,44 @@
 .race-btn, .wiki__nav-item {
     transition: background .3s, border-color .3s, color .3s, box-shadow .3s, transform .25s var(--p4-ease);
 }
-.race-btn {
-    background: var(--p4-pill); border: 1px solid rgba(255, 153, 51, .6); border-radius: 14px;
-    font-family: BPG ExtraSquare Mtavruli, serif; font-size: 18px; letter-spacing: .5px; text-transform: uppercase;
+/* Race selector (Gameplay pages): native swipeable strip, centred when it fits, edges fade out. */
+.race-strip {
+    display: flex; gap: 12px; margin-top: 14px; padding: 8px 24px 18px; overflow-x: auto; overflow-y: hidden;
+    scroll-snap-type: x proximity; scrollbar-width: none; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
+    view-transition-name: race-strip;
 }
-/* Room for the active pill's glow inside the race strip. */
-.raceSwiper { padding: 6px 0 14px; }
-.race-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0, 0, 0, .55), 0 0 12px var(--p4-glow); }
-.race-btn.active { background: var(--p4-pill-active); color: #111; border-color: transparent; box-shadow: 0 6px 18px var(--p4-glow); }
+.race-strip::-webkit-scrollbar { display: none; }
+.race-strip .race-btn:first-child { margin-left: auto; }
+.race-strip .race-btn:last-child { margin-right: auto; }
+.race-btn {
+    position: relative; overflow: hidden; flex: 0 0 auto; width: auto; min-width: 150px; height: 52px; padding: 0 24px;
+    scroll-snap-align: center; background: var(--p4-pill); border: 1px solid rgba(255, 153, 51, .6); border-radius: 14px;
+    font-family: BPG ExtraSquare Mtavruli, serif; font-size: 17px; letter-spacing: .5px; text-transform: uppercase;
+}
+.race-btn:hover { transform: translateY(-2px); border-color: var(--p4-accent); box-shadow: 0 8px 18px rgba(0, 0, 0, .55), 0 0 12px var(--p4-glow); }
+.race-btn:active { transform: scale(.97); }
+.race-btn.active {
+    background: var(--p4-pill-active); color: #111; border-color: transparent; box-shadow: 0 6px 20px var(--p4-glow);
+    view-transition-name: race-active;
+}
+/* Slow light sweep across the selected race. */
+.race-btn.active::after {
+    content: ''; position: absolute; inset: 0; transform: translateX(-120%);
+    background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, .45) 50%, transparent 70%);
+    animation: p4-sheen 4.5s 1s ease-in-out infinite;
+}
+@keyframes p4-sheen { 0%, 70% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+
+/* Moving between pages: cross-fade, and on the race pages the orange pill slides to the new race
+   (cross-document View Transitions; browsers without them just load the page). */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .35s; }
+::view-transition-group(race-active) { animation-duration: .5s; animation-timing-function: cubic-bezier(.2, .7, .2, 1); }
+/* Coming from another race page: no intro animations, the page continues where the visitor was. */
+.p4-same-section .header__content-logo-center img, .p4-same-section .wiki__content.active,
+.p4-same-section .wiki__content.active .p4-stagger { animation: none; }
 
 /* Desktop tab list: accent bar grows on the active/hovered item. */
 .wiki__nav-item { position: relative; }
@@ -92,8 +122,7 @@
     /* Tab title: drop the empty icon column so the text starts at the edge. */
     .wiki__content-title-icon { display: none; }
     .wiki__content-title-info { width: 100%; padding-left: 0; }
-    .raceSwiper .swiper-slide { width: 150px; }
-    .race-btn { width: 150px; height: 48px; font-size: 16px; }
+    .race-btn { min-width: 128px; height: 46px; padding: 0 18px; font-size: 15px; }
 }
 /* Sticky needs no clipping ancestor: clip only sideways where the browser supports it. */
 @supports (overflow-x: clip) {
@@ -138,6 +167,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+    @view-transition { navigation: none; }
     *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
     .p4-reveal { opacity: 1; transform: none; }
 }

@@ -38,12 +38,40 @@
     });
   });
 
+  // Race strip (Gameplay pages): switching race keeps the visitor's place on the page and in the strip,
+  // so only the content and the selected pill change (ui.css animates that with a view transition).
+  var strip = document.querySelector('.race-strip');
+  if (strip) {
+    var key = 'p4-race-pos', saved = null;
+    try { saved = JSON.parse(sessionStorage.getItem(key)); sessionStorage.removeItem(key); } catch (e) {}
+    var current = strip.querySelector('.race-btn.active');
+    var centreRace = function (smooth) {
+      if (!current || strip.scrollWidth <= strip.clientWidth) return;
+      var left = current.offsetLeft - (strip.clientWidth - current.offsetWidth) / 2;
+      strip.scrollTo({ left: left, behavior: smooth && !reduce ? 'smooth' : 'auto' });
+    };
+    if (saved && racePages.indexOf(page) >= 0) {
+      document.documentElement.classList.add('p4-same-section');
+      strip.scrollLeft = saved.x;
+      window.scrollTo(0, saved.y);
+      setTimeout(function () { centreRace(true); }, 550);
+    } else {
+      centreRace(false);
+    }
+    strip.addEventListener('click', function (e) {
+      var a = e.target.closest('.race-btn');
+      if (!a || a.classList.contains('active')) { if (a) e.preventDefault(); return; }
+      try { sessionStorage.setItem(key, JSON.stringify({ x: strip.scrollLeft, y: window.scrollY })); } catch (err) {}
+    });
+  }
+
   // Sections fade up as they scroll into view.
   if (!reduce && 'IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { rootMargin: '0px 0px -8% 0px' });
     document.querySelectorAll('.section__title, .features .content-area, .information .col-1-4, .footer33').forEach(function (el, i) {
+      if (el.querySelector('.race-strip')) return; // the race strip must not move when switching race
       el.classList.add('p4-reveal');
       el.style.transitionDelay = el.matches('.col-1-4') ? (i % 4) * 90 + 'ms' : '';
       io.observe(el);
