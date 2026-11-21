@@ -49,15 +49,16 @@
 }
 /* Race selector (Gameplay pages): native swipeable strip, centred when it fits, edges fade out. */
 .race-strip {
-    display: flex; gap: 12px; margin-top: 14px; padding: 8px 24px 18px; overflow-x: auto; overflow-y: hidden;
+    position: relative; display: flex; gap: 12px; margin-top: 14px; padding: 8px 24px 12px; overflow-x: auto; overflow-y: hidden;
     scroll-snap-type: x proximity; scrollbar-width: none; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
     mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
-    view-transition-name: race-strip;
 }
+/* Race pages: the classes sit right under the race strip (the section's bottom padding made a big gap). */
+.inner-page:has(.race-strip) { padding-bottom: 0; }
 .race-strip::-webkit-scrollbar { display: none; }
-.race-strip .race-btn:first-child { margin-left: auto; }
-.race-strip .race-btn:last-child { margin-right: auto; }
+.race-strip .race-btn:first-of-type { margin-left: auto; }
+.race-strip .race-btn:last-of-type { margin-right: auto; }
 .race-btn {
     position: relative; overflow: hidden; flex: 0 0 auto; width: auto; min-width: 150px; height: 52px; padding: 0 24px;
     scroll-snap-align: center; background: var(--p4-pill); border: 1px solid rgba(255, 153, 51, .6); border-radius: 14px;
@@ -65,26 +66,30 @@
 }
 .race-btn:hover { transform: translateY(-2px); border-color: var(--p4-accent); box-shadow: 0 8px 18px rgba(0, 0, 0, .55), 0 0 12px var(--p4-glow); }
 .race-btn:active { transform: scale(.97); }
-.race-btn.active {
-    background: var(--p4-pill-active); color: #111; border-color: transparent; box-shadow: 0 6px 20px var(--p4-glow);
-    view-transition-name: race-active;
+.race-btn.active { background: var(--p4-pill-active); color: #111; border-color: transparent; box-shadow: 0 6px 20px var(--p4-glow); }
+/* With ui.js the orange comes from one glider that slides under the picked race (segmented control). */
+.race-strip.has-glider .race-btn { z-index: 1; }
+.race-strip.has-glider .race-btn.active { background: transparent; box-shadow: none; transition-delay: .1s; }
+.race-strip__glider {
+    position: absolute; left: 0; top: 0; z-index: 0; overflow: hidden; border-radius: 14px; pointer-events: none;
+    background: var(--p4-pill-active); box-shadow: 0 6px 20px var(--p4-glow);
+    transition: transform .5s cubic-bezier(.3, 1.3, .4, 1), width .5s cubic-bezier(.2, .7, .2, 1);
 }
 /* Slow light sweep across the selected race. */
-.race-btn.active::after {
+.race-strip__glider::after, .race-strip:not(.has-glider) .race-btn.active::after {
     content: ''; position: absolute; inset: 0; transform: translateX(-120%);
     background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, .45) 50%, transparent 70%);
     animation: p4-sheen 4.5s 1s ease-in-out infinite;
 }
 @keyframes p4-sheen { 0%, 70% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
 
-/* Moving between pages: cross-fade, and on the race pages the orange pill slides to the new race
-   (cross-document View Transitions; browsers without them just load the page). */
+/* Swapping the classes of another race in place (ui.js). */
+.wiki.p4-leave { opacity: 0; transform: translateY(10px); transition: opacity .2s ease, transform .2s ease; }
+.wiki.p4-enter { animation: p4-fade .45s cubic-bezier(.2, .7, .2, 1) both; }
+
+/* Other page changes: cross-fade where the browser supports cross-document View Transitions. */
 @view-transition { navigation: auto; }
-::view-transition-old(root), ::view-transition-new(root) { animation-duration: .35s; }
-::view-transition-group(race-active) { animation-duration: .5s; animation-timing-function: cubic-bezier(.2, .7, .2, 1); }
-/* Coming from another race page: no intro animations, the page continues where the visitor was. */
-.p4-same-section .header__content-logo-center img, .p4-same-section .wiki__content.active,
-.p4-same-section .wiki__content.active .p4-stagger { animation: none; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .3s; }
 
 /* Desktop tab list: accent bar grows on the active/hovered item. */
 .wiki__nav-item { position: relative; }
