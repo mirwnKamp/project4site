@@ -1,7 +1,10 @@
 function toggleController(t,e,o){$(t+" > "+e).click(function(t){$(this).parent().find(o).slideToggle(),$(this).toggleClass("active")})}toggleController(".spoiler",".spoiler__header",".spoiler__content"),$(".wiki").MVisionToggleClass({classButton:"wiki__nav-item",toggleClassButton:"active",dataButtonAttr:"data-open-tab",classBox:"wiki__content",toggleClassBox:"active",dataBoxAttr:"data-name-tab",defaultElement:!0,defaultIndexElement:0,ancoreLinks:!0});
-// On phones the tab list sits above the content: after picking a tab, scroll to the content.
+// On phones the tabs are one horizontal strip (main.css): keep the picked tab visible in it.
+$(".wiki__nav").each(function () {
+  var nav = this, active = nav.querySelector(".wiki__nav-item.active");
+  if (active) nav.scrollLeft = active.offsetLeft - (nav.clientWidth - active.offsetWidth) / 2;
+});
 $(document).on("click", ".wiki__nav-item", function () {
-  var nav = document.querySelector(".wiki__nav"), box = document.querySelector(".wiki__box");
-  if (!nav || !box || box.getBoundingClientRect().top < nav.getBoundingClientRect().bottom) return;
-  setTimeout(function () { box.scrollIntoView({ behavior: "smooth", block: "start" }); }, 50);
+  var nav = this.parentElement;
+  if (nav.scrollWidth > nav.clientWidth) $(nav).animate({ scrollLeft: this.offsetLeft - (nav.clientWidth - this.offsetWidth) / 2 }, 200);
 });
