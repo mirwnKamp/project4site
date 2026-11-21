@@ -15,7 +15,12 @@ document.querySelectorAll('.header__content-timer[data-open]').forEach(function 
       return;
     }
     var parts = [Math.floor(left / 86400), Math.floor(left / 3600) % 24, Math.floor(left / 60) % 60, left % 60];
-    parts.forEach(function (v, i) { nums[i].textContent = i ? pad(v) : v; });
+    parts.forEach(function (v, i) {
+      var text = i ? pad(v) : String(v), el = nums[i];
+      if (el.textContent === text) return;
+      el.textContent = text;
+      el.classList.remove('p4-tick'); void el.offsetWidth; el.classList.add('p4-tick'); // restart the tick animation (ui.css)
+    });
   }
   var timer = setInterval(tick, 1000);
   tick();

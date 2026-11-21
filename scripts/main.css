@@ -3275,23 +3275,3 @@ body {
     width: 71px;
     height: 71px
 }
-/* Phone fixes: icon rows keep their text beside the icon, wide tables scroll inside their box. */
-@media (max-width: 680px) {
-    .wiki-icon-container { display: flow-root; }
-    .wiki-icon-image2 { float: left; width: 48px; height: 48px; margin: 0 10px 6px 0; }
-    .wiki__content-main table { display: block; max-width: 100%; overflow-x: auto; }
-    .wiki__content-main img { max-width: 100%; height: auto; }
-
-    /* Tabs: one swipeable strip right above the content instead of a long list. */
-    .wiki__nav { position: relative; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-    .wiki__nav::-webkit-scrollbar { display: none; }
-    .wiki__nav-item, .wiki__nav-item:last-child { width: auto; flex: 0 0 auto; padding: 14px 16px; margin: 0; border: 0; border-right: 1px solid #2b2a2a; }
-    .wiki__nav-item-icon, .wiki__nav-item-desc { display: none; }
-    .wiki__nav-item-info { width: auto; padding-left: 0; white-space: nowrap; }
-    .wiki__nav-item-name { margin-top: 0; }
-    .wiki__box { margin-top: 12px; }
-}
-
-/* The page content overlaps the header (.inner-page has a negative margin and a higher z-index):
-   lift the header while the phone menu is open so the menu stays on top. */
-.header:has(.nav__open-links.active) { z-index: 3; }

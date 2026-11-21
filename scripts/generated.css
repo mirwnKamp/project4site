@@ -1,9 +1,0 @@
-/* Cards for the pages built by tools/generate.py (items.html, skills.html). */
-.p4-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 20px; }
-.p4-card { padding: 15px; border-radius: 8px; background-color: #2c2c2c; border: 2px solid #ff9933; color: #fff; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.5; }
-.p4-card__title { font-size: 18px; font-weight: bold; border-bottom: 2px solid #ff9933; padding-bottom: 4px; display: inline-block; }
-.p4-card__sub { color: #ffcc66; font-size: 13px; margin-top: 4px; }
-.p4-card__body p { margin: 8px 0 0; }
-.p4-card__stats { color: #bbb; font-size: 13px; }
-.p4-card__label { color: #ff9933; font-weight: bold; margin-top: 10px; }
-.p4-list { margin: 6px 0 0; padding-left: 18px; }

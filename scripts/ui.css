@@ -1,0 +1,143 @@
+/* Project4 UI layer: shared look, motion and phone layout for every page.
+   Loaded after main.css; keep site-wide visual changes here instead of editing main.css. */
+:root {
+    --p4-accent: #ff9933;
+    --p4-accent-2: #cc6600;
+    --p4-glow: rgba(255, 153, 51, .35);
+    --p4-surface: #1f1f1f;
+    --p4-card: #2a2a2a;
+    --p4-line: #2b2a2a;
+    --p4-text: #f0e3db;
+    --p4-muted: #8f8782;
+    --p4-pill: linear-gradient(135deg, #333, #1a1a1a);
+    --p4-pill-active: linear-gradient(135deg, var(--p4-accent), var(--p4-accent-2));
+    --p4-ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+@keyframes p4-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes p4-fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes p4-slide { from { opacity: 0; transform: translateX(-14px); } to { opacity: 1; transform: none; } }
+@keyframes p4-zoom { from { opacity: 0; transform: scale(.92); } to { opacity: 1; transform: none; } }
+@keyframes p4-tick { from { opacity: .35; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+/* ---------- Top menu ---------- */
+.nav__links-item a { position: relative; }
+@media (min-width: 1025px) {
+    .nav__links-item a::after {
+        content: ''; position: absolute; left: 0; right: 0; bottom: -10px; height: 2px; border-radius: 2px;
+        background: var(--p4-accent); transform: scaleX(0); transition: transform .3s var(--p4-ease);
+    }
+    .nav__links-item a:hover::after, .nav__links-item a.is-current::after { transform: scaleX(1); }
+}
+.nav__links-item a.is-current { color: var(--p4-accent); }
+/* Phone menu: items slide in one after another. */
+.nav:has(.nav__open-links.active) .nav__links-item { animation: p4-slide .35s var(--p4-ease) both; animation-delay: calc(var(--i, 0) * 40ms); }
+/* The page content overlaps the header (.inner-page has a negative margin and a higher z-index):
+   lift the header while the phone menu is open so the menu stays on top. */
+.header:has(.nav__open-links.active) { z-index: 3; }
+
+/* ---------- Header ---------- */
+.header__content-logo-center img { animation: p4-zoom 1.1s var(--p4-ease) both; }
+.header__content-timer:not([hidden]) { animation: p4-up .8s .3s var(--p4-ease) both; }
+.header__content-timer-time-num.p4-tick { animation: p4-tick .45s var(--p4-ease); }
+.button { transition: box-shadow .3s, transform .3s var(--p4-ease); }
+.button:hover { box-shadow: 0 0 18px var(--p4-glow), 0 0 1px 0 #ff9d00 inset; transform: translateY(-1px); }
+
+/* ---------- Pills: race selector and tabs share one look ---------- */
+.race-btn, .wiki__nav-item {
+    transition: background .3s, border-color .3s, color .3s, box-shadow .3s, transform .25s var(--p4-ease);
+}
+.race-btn {
+    background: var(--p4-pill); border: 1px solid rgba(255, 153, 51, .6); border-radius: 14px;
+    font-family: BPG ExtraSquare Mtavruli, serif; font-size: 18px; letter-spacing: .5px; text-transform: uppercase;
+}
+/* Room for the active pill's glow inside the race strip. */
+.raceSwiper { padding: 6px 0 14px; }
+.race-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0, 0, 0, .55), 0 0 12px var(--p4-glow); }
+.race-btn.active { background: var(--p4-pill-active); color: #111; border-color: transparent; box-shadow: 0 6px 18px var(--p4-glow); }
+
+/* Desktop tab list: accent bar grows on the active/hovered item. */
+.wiki__nav-item { position: relative; }
+.wiki__nav-item::before {
+    content: ''; position: absolute; left: 0; top: 12px; bottom: 12px; width: 3px; border-radius: 3px;
+    background: var(--p4-accent); transform: scaleY(0); transition: transform .3s var(--p4-ease);
+}
+.wiki__nav-item:hover::before { transform: scaleY(.5); }
+.wiki__nav-item.active::before { transform: scaleY(1); }
+.wiki__nav-item:hover .wiki__nav-item-info { transform: translateX(3px); }
+.wiki__nav-item-info { transition: transform .3s var(--p4-ease); }
+
+/* Tablets and phones: tabs become one sticky, swipeable strip of pills right above the content. */
+@media (max-width: 1024px) {
+    .wiki__nav {
+        position: sticky; top: 8px; z-index: 5; display: flex; flex-wrap: nowrap; gap: 8px;
+        overflow-x: auto; overflow-y: hidden; padding: 10px; border: 1px solid var(--p4-line); border-radius: 16px;
+        background: rgba(24, 24, 24, .88); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, .35);
+        scroll-snap-type: x proximity; scrollbar-width: none; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+    }
+    .wiki__nav::-webkit-scrollbar { display: none; }
+    .wiki__nav-item, .wiki__nav-item:last-child {
+        flex: 0 0 auto; width: auto; margin: 0; padding: 10px 16px; scroll-snap-align: center;
+        background: var(--p4-pill); border: 1px solid rgba(255, 153, 51, .45); border-radius: 12px;
+    }
+    .wiki__nav-item::before, .wiki__nav-item-icon, .wiki__nav-item-desc { display: none; }
+    .wiki__nav-item-info { width: auto; padding-left: 0; white-space: nowrap; }
+    .wiki__nav-item:hover .wiki__nav-item-info { transform: none; }
+    .wiki__nav-item-name { margin-top: 0; font-size: 14px; }
+    .wiki__nav-item:hover { background: var(--p4-pill); border-color: var(--p4-accent); }
+    .wiki__nav-item.active { background: var(--p4-pill-active); border-color: transparent; box-shadow: 0 4px 14px var(--p4-glow); }
+    .wiki__nav-item.active .wiki__nav-item-name { color: #111; }
+    .wiki__box { margin-top: 14px; }
+    /* Tab title: drop the empty icon column so the text starts at the edge. */
+    .wiki__content-title-icon { display: none; }
+    .wiki__content-title-info { width: 100%; padding-left: 0; }
+    .raceSwiper .swiper-slide { width: 150px; }
+    .race-btn { width: 150px; height: 48px; font-size: 16px; }
+}
+/* Sticky needs no clipping ancestor: clip only sideways where the browser supports it. */
+@supports (overflow-x: clip) {
+    .wrapper, .section { overflow: visible; overflow-x: clip; }
+}
+
+/* ---------- Tab content ---------- */
+.wiki__content.active { animation: p4-fade .4s var(--p4-ease) both; }
+.wiki__content.active .p4-stagger { animation: p4-up .5s var(--p4-ease) both; animation-delay: calc(var(--i, 0) * 45ms + 80ms); }
+.p4-row { border-radius: 10px; padding: 6px; margin-left: -6px; margin-right: -6px; transition: background .25s; }
+.p4-row:hover { background: rgba(255, 255, 255, .03); }
+
+/* Cards on the generated pages (items.html, skills.html). */
+.p4-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; padding: 20px; }
+.p4-card {
+    position: relative; padding: 16px 18px; border-radius: 14px; color: #fff; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.55;
+    background: linear-gradient(160deg, #303030, #242424); border: 1px solid rgba(255, 153, 51, .35);
+    transition: transform .3s var(--p4-ease), box-shadow .3s, border-color .3s;
+}
+.p4-card:hover { transform: translateY(-4px); border-color: var(--p4-accent); box-shadow: 0 14px 30px rgba(0, 0, 0, .5), 0 0 16px var(--p4-glow); }
+.p4-card__title { font-size: 18px; font-weight: bold; color: var(--p4-text); border-bottom: 2px solid var(--p4-accent); padding-bottom: 4px; display: inline-block; }
+.p4-card__sub { color: #ffcc66; font-size: 13px; margin-top: 6px; }
+.p4-card__body p { margin: 8px 0 0; color: #d9d2cc; }
+.p4-card__stats { color: var(--p4-muted); font-size: 13px; }
+.p4-card__label { color: var(--p4-accent); font-weight: bold; margin-top: 12px; }
+.p4-list { margin: 6px 0 0; padding-left: 18px; }
+.p4-list li { margin: 2px 0; }
+@media (max-width: 680px) { .p4-grid { grid-template-columns: 1fr; padding: 14px; gap: 12px; } }
+
+/* ---------- Scroll reveal (class added by ui.js, so pages stay visible without JS) ---------- */
+.p4-reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--p4-ease), transform .8s var(--p4-ease); }
+.p4-reveal.in { opacity: 1; transform: none; }
+
+/* ---------- Phone fixes ---------- */
+@media (max-width: 680px) {
+    /* Icon rows keep their text beside the icon; wide tables scroll inside their box. */
+    .wiki-icon-container { display: flow-root; }
+    .wiki-icon-image2 { float: left; width: 48px; height: 48px; margin: 0 10px 6px 0; }
+    .wiki__content-main table { display: block; max-width: 100%; overflow-x: auto; }
+    .wiki__content-main img { max-width: 100%; height: auto; }
+    .progress-wrap { right: 16px; bottom: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    .p4-reveal { opacity: 1; transform: none; }
+}
