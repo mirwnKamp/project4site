@@ -1,1 +1,22 @@
-$(document).ready(function(){!function(e){var t=$("."+e).attr("data-time"),i=Math.round((new Date).getTime()/1e3),d=$("."+e).attr("data-lang");if(t<i)return $("."+e).empty(),void $("."+e).append($("."+e).attr("data-end-msg"));setInterval(function(){i=Math.round((new Date).getTime()/1e3);var c=t-i,n=c/86400^0,a=(c-3600*n*24)/3600^0,m=(c-3600*a-3600*n*24)/60^0,s=c-3600*a-3600*n*24-60*m;a<10&&(a="0"+a),m<10&&(m="0"+m),s<10&&(s="0"+s),$("."+e).empty(),"ru"==d?$("."+e).append('<div class="header__content-timer-time-box"><div class="header__content-timer-time-num flex-cc">'+n+'</div><div class="header__content-timer-time-desc">ДНЕЙ</div></div><div class="header__content-timer-time-sep"></div><div class="header__content-timer-time-box"><div class="header__content-timer-time-num flex-cc">'+a+'</div><div class="header__content-timer-time-desc">ЧАС</div></div><div class="header__content-timer-time-sep"></div><div class="header__content-timer-time-box"><div class="header__content-timer-time-num flex-cc">'+m+'</div><div class="header__content-timer-time-desc">МИН</div></div><div class="header__content-timer-time-sep"></div><div class="header__content-timer-time-box"><div class="header__content-timer-time-num flex-cc">'+s+'</div><div class="header__content-timer-time-desc">СЕК</div></div>'):$("."+e).append('<div class="header__content-timer-time-box"><div class="header__content-timer-time-num flex-cc">'+n+'</div><div class="header__content-timer-time-desc">დღე</div></div><div class="header__content-timer-time-sep"></div><div class="header__content-timer-time-box"><div class="header__content-timer-time-num flex-cc">'+a+'</div><div class="header__content-timer-time-desc">საათი</div></div><div class="header__content-timer-time-sep"></div><div class="header__content-timer-time-box"><div class="header__content-timer-time-num flex-cc">'+m+'</div><div class="header__content-timer-time-desc">წუთი</div></div><div class="header__content-timer-time-sep"></div><div class="header__content-timer-time-box"><div class="header__content-timer-time-num flex-cc">'+s+'</div><div class="header__content-timer-time-desc">წამი</div></div>')},0)}("timer1")});
+// Opening countdown. Markup: <div class="header__content-timer" data-open="2026-12-20T20:00:00+02:00" data-end-msg="...">
+// The date is ISO 8601 with the server's UTC offset. Empty or invalid date: the timer stays hidden.
+document.querySelectorAll('.header__content-timer[data-open]').forEach(function (box) {
+  var open = Date.parse(box.getAttribute('data-open'));
+  if (isNaN(open)) return;
+  var time = box.querySelector('.header__content-timer-time');
+  var nums = box.querySelectorAll('.header__content-timer-time-num');
+  var pad = function (n) { return n < 10 ? '0' + n : String(n); };
+  box.hidden = false;
+  function tick() {
+    var left = Math.floor((open - Date.now()) / 1000);
+    if (left <= 0) {
+      clearInterval(timer);
+      time.innerHTML = '<div class="header__content-timer-time-end flex-cc">' + (box.getAttribute('data-end-msg') || 'SERVER IS ONLINE!') + '</div>';
+      return;
+    }
+    var parts = [Math.floor(left / 86400), Math.floor(left / 3600) % 24, Math.floor(left / 60) % 60, left % 60];
+    parts.forEach(function (v, i) { nums[i].textContent = i ? pad(v) : v; });
+  }
+  var timer = setInterval(tick, 1000);
+  tick();
+});
