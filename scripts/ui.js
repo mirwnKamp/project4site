@@ -30,6 +30,17 @@
 
   // Tabs block (.wiki): staggered content and, on phones/tablets, the sticky tab strip.
   function initWiki(wiki) {
+    // Icon rows (icon + loose text): wrap the text so CSS can centre it beside the icon.
+    wiki.querySelectorAll('.wiki-icon-container').forEach(function (row) {
+      if (row.querySelector(':scope > .p4-icon-text')) return;
+      var text = document.createElement('div');
+      text.className = 'p4-icon-text';
+      Array.prototype.slice.call(row.childNodes).forEach(function (n) {
+        if (!(n.nodeType === 1 && n.tagName === 'IMG')) text.appendChild(n);
+      });
+      row.appendChild(text);
+      row.classList.add('p4-icon-row');
+    });
     wiki.querySelectorAll('.wiki__content').forEach(function (tab) {
       tab.querySelectorAll(':scope > div[style] > div').forEach(function (el) { el.classList.add('p4-row'); });
       var items = tab.querySelectorAll('.p4-card, .wiki-icon-container, .wiki__content-main > table, .wiki__content-main > h3, .info-group, :scope > div[style] > div');
@@ -49,6 +60,12 @@
     });
   }
   document.querySelectorAll('.wiki').forEach(initWiki);
+  // Links to a tab on the same page (e.g. footer "game rules" -> wiki#rules while on the wiki) only change the hash.
+  window.addEventListener('hashchange', function () {
+    var id = decodeURIComponent(location.hash.slice(1));
+    var btn = id && document.querySelector('.wiki__nav-item[data-open-tab="' + id.replace(/"/g, '') + '"]');
+    if (btn && !btn.classList.contains('active')) btn.click();
+  });
 
   // Race selector (Gameplay pages): an orange glider slides under the picked race and only the classes
   // below are swapped in from the other race page. Any failure falls back to a normal page load.

@@ -161,11 +161,36 @@
 .p4-reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--p4-ease), transform .8s var(--p4-ease); }
 .p4-reveal.in { opacity: 1; transform: none; }
 
+/* Icon rows (wiki): icon and its text centred on one line, text wraps beside the icon. */
+.wiki-icon-container.p4-icon-row { display: flex; align-items: center; gap: 16px; margin: 6px 0; }
+.p4-icon-row > img { flex: 0 0 auto; margin: 0; vertical-align: middle; }
+.p4-icon-text { flex: 1 1 auto; min-width: 0; line-height: 1.5; }
+.p4-icon-text table { margin-top: 10px; }
+
+/* Enchant tables: side by side on wide screens, stacked on phones. */
+.p4-enchant { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 24px; margin-top: 8px; }
+.p4-enchant h3 { margin: 16px 0 8px; color: var(--p4-accent); }
+
+/* Tables (tablesizer.js turns them into .table divs): keep real columns on phones instead of
+   "Level: / Chance:" lines, so rows read across like in the game. */
+@media (max-width: 840px) {
+    .table__tr, .table__tr:first-child { display: flex; flex-wrap: nowrap; }
+    .table__td { width: auto !important; flex: 1 1 0; min-width: 0; padding: 10px 12px; text-align: left; overflow-wrap: anywhere; }
+    .table__td:last-child { text-align: right; }
+    .table__td:not(:last-child) { border-bottom: 0; }
+    .table__td:before { content: none; }
+}
+
+/* Font Awesome's font files are not in the site: draw the two icons it is used for as plain glyphs. */
+.fas.fa-info, .fas.fa-exclamation-circle { font: 700 20px/1 Georgia, serif; font-style: normal; }
+.fas.fa-info::before { content: 'i'; }
+.fas.fa-exclamation-circle::before { content: '!'; }
+
 /* ---------- Phone fixes ---------- */
 @media (max-width: 680px) {
-    /* Icon rows keep their text beside the icon; wide tables scroll inside their box. */
-    .wiki-icon-container { display: flow-root; }
-    .wiki-icon-image2 { float: left; width: 48px; height: 48px; margin: 0 10px 6px 0; }
+    .p4-icon-row .wiki-icon-image2 { width: 48px; height: 48px; }
+    .p4-icon-row { gap: 12px; }
+    /* Wide tables scroll inside their box. */
     .wiki__content-main table { display: block; max-width: 100%; overflow-x: auto; }
     .wiki__content-main img { max-width: 100%; height: auto; }
     .progress-wrap { right: 16px; bottom: 16px; }
