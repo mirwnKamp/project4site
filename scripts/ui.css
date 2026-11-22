@@ -72,6 +72,10 @@
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
     mask-image: linear-gradient(90deg, transparent, #000 24px, #000 calc(100% - 24px), transparent);
 }
+/* The strip scrolls inside its own box: never wider than the screen (10 races do not fit on a phone). */
+.race-container { min-width: 0; max-width: 100%; flex: 1 1 100%; }
+.race-strip { max-width: 100%; }
+.race-strip .race-btn { display: inline-flex; align-items: center; justify-content: center; min-width: 0; padding: 0 20px; line-height: 1; }
 /* Race pages: the classes sit right under the race strip (the section's bottom padding made a big gap). */
 .inner-page:has(.race-strip) { padding-bottom: 0; }
 .race-strip::-webkit-scrollbar { display: none; }
@@ -195,6 +199,36 @@
 .p4-icon-row > img { flex: 0 0 auto; margin: 0; vertical-align: middle; }
 .p4-icon-text { flex: 1 1 auto; min-width: 0; line-height: 1.5; }
 .p4-icon-text table { margin-top: 10px; }
+
+/* Client icons (icons/*.png from Icon.utx): a dark slot with a thin gold edge, like the in-game inventory. */
+.p4-ico-32, .p4-ico-40, .p4-ico-48 { flex: 0 0 auto; display: block; border-radius: 4px; border: 1px solid #5d4a28; background: #0b0d12;
+    box-shadow: inset 0 0 0 1px #000; image-rendering: auto; }
+.p4-ico-32 { width: 32px; height: 32px; } .p4-ico-40 { width: 40px; height: 40px; } .p4-ico-48 { width: 48px; height: 48px; }
+.p4-ico-none { background: radial-gradient(circle at 50% 35%, #2a2416, #12141b); }
+.p4-card__head { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
+.p4-card__head .p4-card__sub { margin-top: 4px; }
+.p4-list .p4-piece { list-style: none; display: flex; align-items: center; gap: 10px; margin: 6px 0 6px -18px; }
+
+/* Gameplay: every skill of a class, one row each (icon, name, level, New badge, description). */
+.p4-class-about { margin: 18px 20px 0; color: #ddd6c6; line-height: 1.6; }
+.p4-skills { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 10px; padding: 18px 20px 20px; }
+.p4-skills[hidden] { display: none; }
+.p4-skills:not([hidden]) { animation: p4-fade .35s var(--p4-ease) both; }
+.p4-skill { display: flex; gap: 12px; align-items: flex-start; padding: 12px; border-radius: 6px; border: 1px solid rgba(212, 168, 90, .16);
+    background: rgba(11, 13, 18, .55); transition: border-color .25s, background .25s; }
+.p4-skill:hover { border-color: rgba(226, 183, 102, .55); background: rgba(212, 168, 90, .05); }
+.p4-skill.is-new { border-color: rgba(226, 183, 102, .45); background: linear-gradient(180deg, rgba(212, 168, 90, .08), rgba(11, 13, 18, .55)); }
+.p4-skill__body { min-width: 0; }
+.p4-skill__name { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; color: var(--p4-gold-light); font-weight: 700; font-size: 15px; }
+.p4-skill__lv { font-size: 12px; font-weight: 600; color: var(--p4-muted); }
+.p4-badge { padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+    background: var(--p4-pill-active); color: #1a1206; }
+.p4-skill__how { margin-top: 2px; font-size: 12px; color: #e8c070; }
+.p4-skill__desc { margin-top: 4px; font-size: 13.5px; line-height: 1.5; color: #bdb6a6; overflow-wrap: anywhere; }
+@media (max-width: 680px) {
+    .p4-skills { grid-template-columns: 1fr; padding: 14px; gap: 8px; }
+    .p4-class-about { margin: 14px 14px 0; font-size: 15px; }
+}
 
 /* Segment buttons inside a tab (items: Right / Left slot), same pills as the race picker. */
 .p4-seg { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; padding: 20px 20px 0; }

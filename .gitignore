@@ -1,1 +1,3 @@
 status.json
+tools/.cache/
+__pycache__/

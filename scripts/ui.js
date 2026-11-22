@@ -5,7 +5,7 @@
   // Pages are linked without ".html" (GitHub Pages serves /items as items.html). Names here are clean too.
   var clean = function (path) { var n = path.split('#')[0].split('?')[0].split('/').pop().replace(/\.html$/, ''); return n || 'index'; };
   var page = function () { return clean(location.pathname); };
-  var racePages = ['class', 'elf', 'darkElf', 'dwarf', 'orc'];
+  var racePages = ['class', 'elf', 'darkElf', 'orc', 'dwarf', 'kamael', 'ertheia', 'samurai', 'warg', 'shinemaker'];
   // Old links and bookmarks still open /items.html: show the clean address instead.
   if (/^https?:$/.test(location.protocol) && /\.html$/.test(location.pathname) && history.replaceState) {
     history.replaceState(history.state, '', location.pathname.replace(/index\.html$/, '').replace(/\.html$/, '') + location.search + location.hash);

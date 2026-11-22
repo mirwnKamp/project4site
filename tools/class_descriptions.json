@@ -1,0 +1,126 @@
+{
+ "phoenixknight": {
+  "name": "Phoenix Knight",
+  "text": "The Phoenix Knight excels in absorbing damage and keeping enemies focused on them rather than their more vulnerable teammates. With high defense, powerful self-healing abilities, and skills that reduce the damage taken by themselves and their allies, this class is designed to be a formidable front-line protector."
+ },
+ "hellknight": {
+  "name": "Hell Knight",
+  "text": "is a fearsome and relentless tank, known for their unparalleled offensive power and dark abilities that weaken and torment their enemies. With a perfect balance of defense and aggression, the Hell Knight thrives in chaotic battles, unleashing curses and debuffs to disrupt opponents while maintaining a high level of survivability. A menacing force on the battlefield, the Hell Knight draws power from fear and destruction to dominate any foe in their path."
+ },
+ "dreadnought": {
+  "name": "Dreadnought",
+  "text": "stands as a fearsome juggernaut on the battlefield, wielding powerful crowd-control abilities to dominate large groups of enemies. With its exceptional area-of-effect attacks and sheer durability, the Dreadnought excels at disrupting enemy formations and absorbing immense damage. A master of control, this class is perfect for players who thrive on leading the charge and crushing waves of opponents while maintaining a near-unstoppable defense."
+ },
+ "duelist": {
+  "name": "Duelist",
+  "text": "is a master of one-on-one combat, specializing in powerful physical attacks and devastating combos. With unmatched offensive prowess and swift strikes, the Duelist thrives in close-quarters battle, overwhelming enemies with relentless attacks. Combining precision with power, this class excels at taking down opponents swiftly, making it ideal for players who prefer direct confrontations and fast-paced combat. The Duelist's strength lies in delivering high burst damage, dominating duels, and turning the tide in small-scale skirmishes."
+ },
+ "adventurer": {
+  "name": "Adventurer",
+  "text": "is a versatile rogue who thrives in high-stakes combat and unpredictable situations. Armed with agility and precision, this class excels at critical strikes, evasion, and stealth tactics. The Adventurer uses deadly daggers and lethal skills to outmaneuver enemies, making them a formidable force in both PvE and PvP encounters. With a perfect balance of speed, finesse, and survivability, they are able to navigate dangerous battlegrounds, evade lethal blows, and strike when the enemy least expects it."
+ },
+ "sagittarius": {
+  "name": "Sagittarius",
+  "text": "is a master archer renowned for their unparalleled precision and long-range lethality. Specializing in powerful ranged attacks, they excel at dealing consistent, high burst damage from a safe distance. With excellent accuracy and critical hit potential, the Sagittarius dominates both in PvE and PvP, taking down enemies before they can even approach. Their superior marksmanship, combined with skills that increase mobility and offensive output, makes them a fearsome presence on the battlefield."
+ },
+ "soultaker": {
+  "name": "SoulTaker",
+  "text": "is a powerful dark mage who manipulates the forces of death and the undead to dominate the battlefield. Specializing in curses, life-stealing spells, and summoning the reanimated dead, this class excels at draining enemies of their vitality while empowering themselves. With strong magical attacks and debuffs, the Soultaker is capable of weakening foes over time while unleashing devastating dark magic. Their role revolves around outlasting opponents by controlling life force, crippling enemies, and commanding minions to assist in combat."
+ },
+ "archmage": {
+  "name": "Archmage",
+  "text": "is the ultimate master of elemental magic, capable of wielding immense destructive power. Specializing in fire elemental forces, the Archmage excels in dealing high area-of-effect damage, decimating groups of enemies with powerful spells. Their role on the battlefield is to obliterate opponents with overwhelming magical attacks while controlling the flow of combat with spells that burn, freeze, and stun. With superior magical knowledge, the Archmage dominates from a distance, making them a critical offensive force in any team composition."
+ },
+ "arcanalord": {
+  "name": "Arcana Lord",
+  "text": "is a powerful summoner who commands fearsome beasts to fight alongside them, offering a unique blend of magic and pet combat. Master of summon-based warfare, the Arcana Lord excels at overwhelming enemies through their minions, while using their own magic to control and enhance their pets. With strong utility and support abilities, they dominate the battlefield by leveraging both their magical prowess and the raw power of their summons to harass, disrupt, and overpower foes from a distance."
+ },
+ "cardinal": {
+  "name": "Cardinal",
+  "text": "is the pinnacle of healing classes, providing unmatched restorative powers to keep their allies alive and in fighting shape. With powerful healing spells, resurrection abilities, and protective buffs, the Cardinal ensures their party's survival in the most intense battles. They specialize in sustaining groups through prolonged engagements, negating damage, and quickly reviving fallen comrades, making them essential in both PvE raids and PvP conflicts. Their role is to stand as the backbone of any group, offering unparalleled support and keeping their allies fighting at full strength."
+ },
+ "hierophant": {
+  "name": "Hierophant",
+  "text": "is a versatile support class that excels not only in empowering their allies with potent offensive buffs but also in weakening their enemies with devastating debuffs. Their unique ability to switch between different playstyles makes them adaptable to various combat scenarios, whether focusing on strengthening their team or disrupting the enemy. Known for their advanced group buffs, the Hierophant can significantly enhance the combat effectiveness of their party, while their escape tactics and crowd control skills make them essential in both PvP and PvE encounters. Mastering this class offers a dynamic gameplay experience, allowing players to shift between support, offensive, and strategic roles."
+ },
+ "evastemplar": {
+  "name": "Evas Templar",
+  "text": "is a defensive powerhouse, specializing in protecting allies with a combination of high durability and defensive abilities. As a shield-wielding tank, they excel at absorbing damage, using powerful auras and self-healing skills to endure even the most relentless assaults. What sets them apart is their ability to enhance their party's survivability with healing effects and defensive buffs, making them an essential protector in any group. Eva's Templar is not only a formidable wall against enemies but also a vital support class, offering both defense and restoration on the battlefield."
+ },
+ "swordmuse": {
+  "name": "Sword Muse",
+  "text": "is a versatile support class, blending melee combat with powerful songs that enhance the strength and resilience of their party. Their role extends beyond dealing damage, as they empower allies with buffs that increase offensive capabilities, speed, and defense, turning the tide of battle in their favor. With a unique ability to inspire and uplift, the Sword Muse excels in both PvE and PvP, making them indispensable in group play. Their combination of combat prowess and group support ensures their place as both a front-line fighter and a strategic enabler."
+ },
+ "windrider": {
+  "name": "Wind Rider",
+  "text": "is a master of stealth and speed, excelling in burst damage and quick, precise attacks. As an elite assassin, the Wind Rider uses their agility and evasion to swiftly close in on enemies, dealing lethal damage before disappearing into the shadows. With high mobility and critical strike capabilities, they are ideal for isolating and eliminating key targets in both PvP and PvE. Their role revolves around hit-and-run tactics, utilizing their fast movement and evasion skills to avoid damage while maximizing their offensive potential."
+ },
+ "moonlightsentinel": {
+  "name": "Moonlight Sentinel",
+  "text": "is the epitome of precision and agility, excelling as a long-range damage dealer. With unparalleled speed and accuracy, they rain down arrows on enemies from a distance, making them lethal in both single-target and group battles. The Moonlight Sentinel's ability to land critical hits with exceptional frequency makes them one of the most feared archers in the battlefield. Their high mobility and evasion allow them to keep a safe distance while delivering continuous, devastating attacks. In both PvP and PvE, they play the role of a sniper, focusing on eliminating key targets swiftly."
+ },
+ "evassaint": {
+  "name": "Eva's Saint",
+  "text": "is a master of restorative magic and support, bringing unparalleled healing and protection to their allies. Not only can they mend wounds with powerful healing spells, but they also have the unique ability to restore mana to their comrades, ensuring their team never runs out of the energy needed to fight. Their buffs enhance defense, magic resistance, and other key stats, while cleansing debuffs to keep their allies at peak performance. Eva's Saint excels at keeping their team alive and empowered, making them a vital presence in both PvE and PvP encounters."
+ },
+ "elementalmaster": {
+  "name": "Elemental Master",
+  "text": "commands the forces of nature and summons powerful elemental creatures to fight alongside them. With their summons, they can unleash devastating attacks while keeping a safe distance from danger. The Elemental Master’s strength lies in their ability to adapt their summons to various situations, ensuring their pets can either protect, assist in damage dealing, or disrupt enemy formations. This master of summoned beasts is essential for those who prefer a tactical, pet-based style of play, excelling in PvE and PvP through strategic use of their elemental companions."
+ },
+ "mysticmuse": {
+  "name": "Mystic Muse",
+  "text": "is a powerful elemental mage, specializing in the destructive magic of water and ice. With an array of long-range spells, they can freeze their enemies in place and unleash devastating damage. Their control over the battlefield is unmatched, slowing and immobilizing foes while dealing relentless magical attacks. Whether in large-scale PvP or PvE encounters, the Mystic Muse excels at keeping enemies at a distance and delivering overwhelming magical force. Their versatile elemental control makes them a force to be reckoned with in any combat situation."
+ },
+ "shillientemplar": {
+  "name": "Shillien Templar",
+  "text": "is a fierce tank class that harnesses the power of darkness to protect their allies. Combining high defense with offensive dark magic, they can absorb damage, taunt enemies, and unleash powerful debuffs to weaken their foes. Their defensive abilities and crowd control make them an essential frontline protector, excelling in both PvP and PvE environments, where they shield their team while dealing steady damage."
+ },
+ "spectraldancer": {
+  "name": "Spectral Dancer",
+  "text": "enchants their allies with dark and powerful dances, increasing their combat effectiveness while weakening their enemies. Their dance skills provide a variety of buffs that enhance attack speed, critical chances, and overall damage for their party. Spectral Dancers also excel in melee combat, delivering strong blows while supporting their team, making them indispensable in large-scale battles."
+ },
+ "ghosthunter": {
+  "name": "Ghost Hunter",
+  "text": "is a master of stealth and assassination, specializing in deadly close-range attacks. With their ability to vanish from sight, strike swiftly, and evade enemy defenses, they are the ultimate silent killer. Ghost Hunters excel in one-on-one combat, dealing massive critical damage while avoiding detection, making them a nightmare for their enemies in both PvP and PvE scenarios."
+ },
+ "ghostsentinel": {
+  "name": "Ghost Sentinel",
+  "text": "is a lethal archer, capable of inflicting heavy damage from a distance while remaining elusive. Their dark-infused arrows strike with incredible precision and power, often critically wounding or killing enemies in a single shot. The Ghost Sentinel’s agility and high evasion allow them to stay out of harm's way, making them ideal for both PvP skirmishes and long-range PvE engagements."
+ },
+ "stormscreamer": {
+  "name": "Storm Screamer",
+  "text": "commands the power of wind and dark magic to unleash devastating magical attacks on their enemies. With their ability to cast high-damage area-of-effect spells and powerful single-target nukes, Storm Screamers are a force of destruction on the battlefield. Their mastery over wind magic allows them to deal massive damage quickly, making them ideal for both crowd control and burst damage in PvP and PvE."
+ },
+ "shilliensaint": {
+  "name": "Shillien Saint",
+  "text": "is a powerful support class, specializing in enhancing their allies with dark blessings and powerful buffs. They can heal, restore mana, and strengthen their party with a wide range of skills. In addition to boosting their allies' effectiveness in combat, Shillien Saints can also weaken enemies with potent debuffs, playing a critical role in both offense and defense during large-scale battles."
+ },
+ "spectralmaster": {
+  "name": "Spectral Master",
+  "text": "is a dark summoner, calling forth powerful spectral beings to fight alongside them. These spectral summons can deal heavy damage, defend the summoner, and disrupt enemy formations. With the ability to command multiple spectral beasts, the Spectral Master excels at both offensive and defensive tactics, making them a versatile asset in both PvP and PvE encounters."
+ },
+ "titan": {
+  "name": "Titan",
+  "text": "is the epitome of raw physical power on the battlefield. With unparalleled strength and devastating melee attacks, Titans excel in dealing massive burst damage, especially in close combat. Their ability to enhance their physical prowess through powerful self-buffs makes them a dominant force in PvE and PvP. Known for their ferocious critical hits and ability to endure high amounts of damage, the Titan is the perfect class for those who want to lead the charge and crush their enemies with brute force."
+ },
+ "grandkhavatari": {
+  "name": "Grand Khavatari",
+  "text": "is a master of martial arts and rapid, relentless attacks. This class specializes in using fist weapons and focuses on quick, successive strikes to overwhelm opponents. With powerful self-buffs and abilities that increase their attack speed, critical rate, and damage, the Grand Khavatari can tear through enemies with lightning-fast combos. They are also highly mobile, making them dangerous adversaries in both PvE and PvP, capable of wearing down foes with sheer speed and precision."
+ },
+ "dominator": {
+  "name": "Dominator",
+  "text": "is a fearsome orc shaman who leads the battlefield with powerful clan-wide buffs and debuffs. Their unique ability to empower entire clans with offensive and defensive buffs makes them an essential leader in mass battles. Additionally, Dominators can unleash powerful debuffs and damage spells, weakening enemies and controlling the battlefield. Their role in combat is to support their allies while crippling their enemies, excelling in large-scale PvP, where their influence can turn the tide of war."
+ },
+ "doomcryer": {
+  "name": "Doomcryer",
+  "text": "is a versatile battle shaman, combining potent offensive magic with powerful buffs and debuffs. They are known for enhancing their party's combat potential and disrupting enemies with debilitating debuffs. Their unique mix of skills allows them to be effective in both solo and group play, providing support while also being able to inflict significant damage. In PvP, they are a force to be reckoned with, capable of buffing allies while simultaneously weakening their opponents."
+ },
+ "fortuneseeker": {
+  "name": "Fortune Seeker",
+  "text": "is a treasure hunter who harnesses the raw power of a Titan while utilizing the spoil skill to gather valuable resources. Known for their ability to deal tremendous physical damage in close combat, Fortune Seekers also possess skills to enhance their loot collection, making them ideal for farming rare materials and spoils from defeated enemies. Their role in battle is to crush opponents with heavy blows while securing valuable items for crafting. Combining strength, treasure hunting, and crafting potential, the Fortune Seeker is a versatile class that thrives in both PvE and group play."
+ },
+ "maestro": {
+  "name": "Maestro",
+  "text": "is a master craftsman and warrior, combining the strength of a Titan with the unique ability to craft and build powerful siege weapons. As a formidable tank and damage dealer, Maestros excel in close combat, using their strong physical prowess to withstand heavy blows while dealing devastating damage. Their crafting abilities make them invaluable in creating high-quality weapons, armor, and items, while their spoil skill allows them to gather rare materials from enemies. The Maestro is a unique blend of brute force and crafting expertise, making them essential in both battle and resource gathering."
+ }
+}
