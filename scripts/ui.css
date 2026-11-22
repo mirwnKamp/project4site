@@ -148,6 +148,13 @@
     .wiki__content-title-info { width: 100%; padding-left: 0; }
     .race-btn { min-width: 128px; height: 46px; padding: 0 18px; font-size: 15px; }
 }
+/* ui.js pins the strip with position:fixed (html.p4-pin); without it the strip stays sticky. */
+.p4-nav-sentinel, .p4-nav-spacer { display: none; }
+@media (max-width: 1024px) {
+    .p4-nav-sentinel, .p4-nav-spacer { display: block; width: 100%; flex: 0 0 100%; }
+    .p4-pin .wiki__nav { position: relative; top: auto; }
+    .p4-pin .wiki__nav.is-pinned { position: fixed; top: 8px; z-index: 50; margin: 0; }
+}
 /* Sticky needs no clipping ancestor: clip only sideways where the browser supports it. */
 @supports (overflow-x: clip) {
     .wrapper, .section { overflow: visible; overflow-x: clip; }

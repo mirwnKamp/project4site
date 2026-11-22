@@ -28,7 +28,45 @@
     if (strip.scrollTo) strip.scrollTo({ left: left, behavior: smooth && !reduce ? 'smooth' : 'auto' }); else strip.scrollLeft = left;
   }
 
-  // Tabs block (.wiki): staggered content and, on phones/tablets, the sticky tab strip.
+  // Phones/tablets: the tab strip is pinned with position:fixed while the tabs block is on screen. CSS sticky
+  // jitters on iOS Safari while its toolbar hides/shows; fixed is drawn by the compositor and stays still.
+  // Two observers (top spacer, end of the block): no scroll listener.
+  var phone = window.matchMedia && matchMedia('(max-width: 1024px)');
+  function pinNav(wiki, nav) {
+    if (!phone || !('IntersectionObserver' in window)) return; // ui.css keeps position:sticky as the fallback
+    document.documentElement.classList.add('p4-pin');
+    // sentinel: zero height, marks where the strip starts; spacer: keeps its room while it is pinned.
+    var sentinel = document.createElement('div'), spacer = document.createElement('div'), end = document.createElement('div');
+    sentinel.className = 'p4-nav-sentinel';
+    spacer.className = 'p4-nav-spacer';
+    nav.parentNode.insertBefore(sentinel, nav);
+    nav.parentNode.insertBefore(spacer, nav);
+    (wiki.querySelector('.wiki__box') || wiki).appendChild(end);
+    var above = false, endBelow = true;
+    var place = function () {
+      var on = phone.matches && above && endBelow;
+      if (on) {
+        var r = sentinel.getBoundingClientRect();
+        spacer.style.height = nav.offsetHeight + 'px';
+        nav.style.left = r.left + 'px';
+        nav.style.width = r.width + 'px';
+      } else {
+        spacer.style.height = nav.style.left = nav.style.width = '';
+      }
+      nav.classList.toggle('is-pinned', on);
+    };
+    new IntersectionObserver(function (e) {
+      above = e[0].boundingClientRect.top < 8;
+      place();
+    }, { rootMargin: '-8px 0px 0px 0px' }).observe(sentinel);
+    new IntersectionObserver(function (e) {
+      endBelow = e[0].isIntersecting || e[0].boundingClientRect.top > 0;
+      place();
+    }, { rootMargin: '-120px 0px 0px 0px' }).observe(end);
+    window.addEventListener('resize', place);
+  }
+
+  // Tabs block (.wiki): staggered content and, on phones/tablets, the pinned tab strip.
   function initWiki(wiki) {
     // Icon rows (icon + loose text): wrap the text so CSS can centre it beside the icon.
     wiki.querySelectorAll('.wiki-icon-container').forEach(function (row) {
@@ -48,13 +86,14 @@
     });
     var nav = wiki.querySelector('.wiki__nav');
     if (!nav) return;
+    pinNav(wiki, nav);
     scrollStrip(nav, nav.querySelector('.wiki__nav-item.active'), false);
     nav.addEventListener('click', function (e) {
       var item = e.target.closest('.wiki__nav-item');
       if (!item) return;
       scrollStrip(nav, item, true);
       var box = wiki.querySelector('.wiki__box');
-      if (!box || getComputedStyle(nav).position !== 'sticky') return;
+      if (!box || !/sticky|fixed/.test(getComputedStyle(nav).position)) return;
       var gap = box.getBoundingClientRect().top - nav.offsetHeight - 16;
       if (gap < 0) window.scrollBy({ top: gap, behavior: reduce ? 'auto' : 'smooth' });
     });
