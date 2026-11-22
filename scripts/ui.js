@@ -84,6 +84,23 @@
       var items = tab.querySelectorAll('.p4-card, .wiki-icon-container, .wiki__content-main > table, .wiki__content-main > h3, .info-group, :scope > div[style] > div');
       items.forEach(function (el, i) { el.classList.add('p4-stagger'); el.style.setProperty('--i', Math.min(i, 12)); });
     });
+    // Segment buttons inside a tab (items.html accessories: Right / Left slot): one grid at a time.
+    wiki.querySelectorAll('.p4-seg').forEach(function (seg) {
+      var show = function (name) {
+        seg.querySelectorAll('button[data-seg]').forEach(function (b) {
+          var on = b.getAttribute('data-seg') === name;
+          b.classList.toggle('active', on);
+          b.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        seg.parentNode.querySelectorAll('[data-seg-panel]').forEach(function (p) { p.hidden = p.getAttribute('data-seg-panel') !== name; });
+      };
+      seg.querySelectorAll('button[data-seg]').forEach(function (b) { b.setAttribute('role', 'tab'); });
+      show((seg.querySelector('button.active') || seg.querySelector('button[data-seg]')).getAttribute('data-seg'));
+      seg.addEventListener('click', function (e) {
+        var b = e.target.closest('button[data-seg]');
+        if (b) show(b.getAttribute('data-seg'));
+      });
+    });
     var nav = wiki.querySelector('.wiki__nav');
     if (!nav) return;
     pinNav(wiki, nav);

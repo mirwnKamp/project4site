@@ -196,6 +196,19 @@
 .p4-icon-text { flex: 1 1 auto; min-width: 0; line-height: 1.5; }
 .p4-icon-text table { margin-top: 10px; }
 
+/* Segment buttons inside a tab (items: Right / Left slot), same pills as the race picker. */
+.p4-seg { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; padding: 20px 20px 0; }
+.p4-seg button {
+    min-height: 44px; padding: 0 22px; border-radius: 999px; cursor: pointer; border: 1px solid rgba(212, 168, 90, .35);
+    background: var(--p4-pill); color: #cfc8b8; font: 700 15px var(--p4-serif); letter-spacing: .06em;
+    transition: background .3s, color .3s, border-color .3s, transform .25s var(--p4-ease);
+}
+.p4-seg button:hover { border-color: var(--p4-accent); color: var(--p4-gold-light); transform: translateY(-1px); }
+.p4-seg button.active { background: var(--p4-pill-active); color: #1a1206; border-color: transparent; box-shadow: 0 6px 20px var(--p4-glow); }
+.p4-grid[hidden] { display: none; }
+.p4-grid[data-seg-panel]:not([hidden]) { animation: p4-fade .35s var(--p4-ease) both; }
+.p4-stage { margin: 0 20px 24px; }
+
 /* Wiki line icons (wiki-page/icons/*.svg): gold ring like the home feature cards. */
 .p4-icon-row > img.p4-ico, .wiki-icon-container > img.p4-ico {
     width: 48px; height: 48px; padding: 11px; box-sizing: border-box; border-radius: 50%;
