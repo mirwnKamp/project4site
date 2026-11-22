@@ -95,6 +95,19 @@ class Client:
                     out[k[0]] = self._value('[' + first.group(1) + ']')
         return out
 
+    def largest_mip(self, key):
+        """(offset, size) of the biggest DXT1 mip of a texture. Older icons have one mip at the end of the export
+        (what iconpatch.pixels reads); the Samurai Crow ones (s_*) carry mipmaps 64 -> 1, so look for each size's
+        footer (USize, VSize, UBits, VBits) with its DXT1 data length in front of the data."""
+        off, size = self.textures[key]
+        for w in (128, 64, 32, 16):
+            n = w * w // 2
+            footer = struct.pack('<IIBB', w, w, w.bit_length() - 1, w.bit_length() - 1)
+            at = self.pkg.find(footer, off, off + size)
+            if at > 0 and self.pkg[at - n - 2:at - n] == bytes([0x40 | (n & 0x3F), n >> 6]):
+                return at - n, w
+        return None
+
     def icon_png(self, icon, folder):
         """Decode icon.<name> from Icon.utx to folder/<name>.png; returns the file name, or None (not in Icon.utx / not DXT1)."""
         if not icon or not icon.lower().startswith('icon.'):
@@ -106,10 +119,10 @@ class Client:
             return fname
         if key not in self.textures:
             return None
-        try:
-            off, w = self.ip.pixels(self.pkg, self.textures, key, 'site')
-        except SystemExit:
+        found = self.largest_mip(key)
+        if not found:
             return None
+        off, w = found
         os.makedirs(folder, exist_ok=True)
         with open(path, 'wb') as f:
             f.write(png(dxt1(self.pkg, off, w), w))
