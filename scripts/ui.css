@@ -185,6 +185,12 @@
 .p4-icon-text { flex: 1 1 auto; min-width: 0; line-height: 1.5; }
 .p4-icon-text table { margin-top: 10px; }
 
+/* Wiki line icons (wiki-page/icons/*.svg): gold ring like the home feature cards. */
+.p4-icon-row > img.p4-ico, .wiki-icon-container > img.p4-ico {
+    width: 48px; height: 48px; padding: 11px; box-sizing: border-box; border-radius: 50%;
+    border: 1px solid rgba(212, 168, 90, .45); background: radial-gradient(circle at 50% 35%, #2a2416, #12141b);
+}
+
 /* Enchant tables: side by side on wide screens, stacked on phones. */
 .p4-enchant { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 24px; margin-top: 8px; }
 .p4-enchant h3 { margin: 16px 0 8px; color: var(--p4-accent); }
