@@ -1,0 +1,28 @@
+#!/bin/bash
+# Writes the public server status the home page shows (scripts/status.js): game/login server up, epic boss state.
+# No player data. Runs every minute from p4-site-status.timer as root (MySQL root logs in by socket on the VPS).
+# Install: tools/vps/install.sh
+set -euo pipefail
+OUT=/var/www/p4preview/site/status.json
+DB=l2jmobius_samuraicrow
+now=$(date +%s)
+
+listening() { if ss -Hltn "( sport = :$1 )" | grep -q .; then echo true; else echo false; fi; }
+game=$(listening 7777)
+login=$(listening 2106)
+
+# Boss names from the server NPC XML (grandboss_data keeps only ids).
+names='19740=Fafurion;26124=Kelbim;29006=Core;29068=Antharas;29118=Beleth;29197=Earth Wyrm Trasken;29240=Lindvior;29305=Helios;29325=Orfen;29336=Lilith;29348=Anakim;29381=Queen Ant;29391=Baium;29415=Valakas'
+# respawn_time is in ms. Waiting to respawn = dead; status 0 = alive; anything else (awake, in fight, closed) = busy.
+bosses=$(mysql -N -B -e "SELECT boss_id, respawn_time, status FROM $DB.grandboss_data ORDER BY boss_id" | awk -F'\t' -v now="$now" -v names="$names" '
+  BEGIN { n = split(names, kv, ";"); for (i = 1; i <= n; i++) { split(kv[i], p, "="); name[p[1]] = p[2] } }
+  ($1 in name) {
+    st = ($2 / 1000 > now) ? "dead" : ($3 == 0 ? "alive" : "busy")
+    printf "%s{\"name\":\"%s\",\"state\":\"%s\"}", (c++ ? "," : ""), name[$1], st
+  }')
+
+mkdir -p "$(dirname "$OUT")"
+tmp=$(mktemp "$OUT.XXXXXX")
+printf '{"updated":%s,"game":%s,"login":%s,"bosses":[%s]}\n' "$now" "$game" "$login" "$bosses" > "$tmp"
+chmod 644 "$tmp"
+mv "$tmp" "$OUT"

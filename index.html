@@ -34,11 +34,10 @@
   <meta name="viewport" content="width=device-width" >
   <link rel="shortcut icon" href="main-page/4only.png" >
   <link rel="icon" href="main-page/4only.png" >
-  <link rel="stylesheet" href="scripts/main.css?v=202611220213" >
-  <link rel="stylesheet" href="scripts/swiper.css?v=202611220213" >
+  <link rel="stylesheet" href="scripts/main.css?v=202611221018" >
   <link rel="apple-touch-icon" sizes="256x256" href="main-page/4only.png" >
-  <link rel="stylesheet" href="scripts/top.css?v=202611220213">
-<link rel="stylesheet" href="scripts/ui.css?v=202611220213">
+  <link rel="stylesheet" href="scripts/top.css?v=202611221018">
+<link rel="stylesheet" href="scripts/ui.css?v=202611221018">
   <style>
      .preload {
      background-color: #1d1a19;
@@ -60,7 +59,7 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
    <div class="wrapper">
-        <header class="header">
+        <header class="header p4-hero">
           <nav class="nav">
             <div class="flex-sc content-area"><a href="./" class="flex-cc nav__logo"><img alt="" src="main-page/4only.png"></a> 
               <div class="flex-sc nav__links">
@@ -100,163 +99,92 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="banners" style="position: realative; z-index: 99999;float:right"></div>
           </nav>
-          <div class="flex-cc header__box">
-            <div class="header__content">
-              <div class="flex-cc header__content-logo">
-                <div class="header__content-logo-left"></div><a href="./" class="flex-cc header__content-logo-center"><img alt="" src="main-page/p4.png"></a>
-                <div class="header__content-logo-right"></div>
-              </div>
-              <div class="header__content-promo">
-                <div class="header__content-promo-title"><span></span></div>
-
-              </div>
-              <div class="flex-cc header__content-sep"><img alt="" src=""></div>
-			  <div class="flex-cc header__content-sep"><img alt="" src=""></div>
-			  <div class="flex-cc header__content-sep"><img alt="" src=""></div>
-              <!-- Opening countdown: set data-open to the opening date (ISO, with the server UTC offset). Empty = hidden. -->
-              <div class="header__content-timer" data-open="2026-12-20T20:00:00+02:00" data-end-msg="SERVER IS ONLINE!" hidden>
-                <div class="header__content-timer-title">Grand Opening</div>
-                <div class="flex-cs header__content-timer-time">
-                  <div class="header__content-timer-time-box">
-                    <div class="flex-cc header__content-timer-time-num">0</div>
-                    <div class="header__content-timer-time-desc">days</div>
-                  </div>
-                  <div class="header__content-timer-time-box">
-                    <div class="flex-cc header__content-timer-time-num">0</div>
-                    <div class="header__content-timer-time-desc">hours</div>
-                  </div>
-                  <div class="header__content-timer-time-box">
-                    <div class="flex-cc header__content-timer-time-num">0</div>
-                    <div class="header__content-timer-time-desc">minutes</div>
-                  </div>
-                  <div class="header__content-timer-time-box">
-                    <div class="flex-cc header__content-timer-time-num">0</div>
-                    <div class="header__content-timer-time-desc">seconds</div>
-                  </div>
-                </div>
+          <div class="p4-hero__box">
+            <div class="p4-hero__eyebrow"><span aria-hidden="true"></span>Lineage II · Samurai Crow · Grand Opening</div>
+            <a href="./" class="p4-hero__logo"><img alt="Project4" src="main-page/p4.png" width="560" height="190"></a>
+            <p class="p4-hero__lead">Low-rate x1 server on the newest Samurai Crow client. Fair play, anticheat-protected, built for the long run.</p>
+            <!-- Opening countdown: set data-open to the opening date (ISO, with the server UTC offset). Empty = hidden. -->
+            <div class="header__content-timer p4-frame" data-open="2026-12-20T20:00:00+02:00" data-end-msg="SERVER IS ONLINE!" hidden>
+              <div class="header__content-timer-title">Opens 20 December 2026 · 20:00 GR</div>
+              <div class="header__content-timer-time">
+                <div class="header__content-timer-time-box"><div class="header__content-timer-time-num">0</div><div class="header__content-timer-time-desc">days</div></div>
+                <div class="header__content-timer-time-box"><div class="header__content-timer-time-num">0</div><div class="header__content-timer-time-desc">hours</div></div>
+                <div class="header__content-timer-time-box"><div class="header__content-timer-time-num">0</div><div class="header__content-timer-time-desc">minutes</div></div>
+                <div class="header__content-timer-time-box"><div class="header__content-timer-time-num">0</div><div class="header__content-timer-time-desc">seconds</div></div>
               </div>
             </div>
+            <div class="p4-hero__cta">
+              <a class="p4-btn p4-btn--gold" href="startgame"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>Download Client</a>
+              <a class="p4-btn" href="https://acp.l2project4.com/">Create Account</a>
+            </div>
           </div>
-          <div class="header__video"><video autoplay class="header__video-player" loop muted playsinline>
-              <source src="main-page/darkElf.webm" type="video/webm">
-            </video></div>
         </header>
+
+        <!-- Server status. The live cells fill from status.json (written on the game VPS by tools/vps/p4-site-status);
+             without that file (e.g. on GitHub Pages) they stay hidden and only the static cells show. -->
+        <section class="p4-status p4-frame" aria-label="Server status">
+          <div class="p4-status__cell" data-live hidden><span class="p4-dot" data-status-dot></span><div><div class="p4-status__k">Game server</div><div class="p4-status__v" data-status-game>…</div></div></div>
+          <div class="p4-status__cell"><div><div class="p4-status__k">Rates</div><div class="p4-status__v">x1 · Vitality x2</div></div></div>
+          <div class="p4-status__cell"><div><div class="p4-status__k">Max enchant</div><div class="p4-status__v">+30</div></div></div>
+          <div class="p4-status__cell"><div><div class="p4-status__k">Opening</div><div class="p4-status__v">20 Dec · 20:00</div></div></div>
+        </section>
+
         <section class="section features">
           <div class="flex-cc section__title">
             <div class="section__title-left"></div>
             <div class="section__title-center">
-              <div class="section__title-center-big">WHY Project4?</div>
+              <div class="section__title-center-big">Server Features</div>
             </div>
             <div class="section__title-right"></div>
-            <div class="section__title-small">Made by Players for Players.</div>
+            <div class="section__title-small">Classic progression, modern quality of life. <a href="wiki"><u>Full wiki</u></a></div>
           </div>
-          <div class="content-area">
-            <div class="mySwiper swiper">
-              <div class="swiper-wrapper">
-                <div class="flex-cc swiper-slide"><img alt="" src="main-page/1.jpg" class="swiper-slide-bg">
-                  <div class="flex-cc swiper-slide-content">
-                    <div class="swiper-slide-title"><span> Latest</span> client</div>
-                    <div class="flex-cc swiper-slide-sep"><img alt="" src="main-page/sep.webp"></div>
-                    <div class="swiper-slide-text">A new game client adapted to a unique gameplay</div>
-                  </div>
-                </div>
-                <div class="flex-cc swiper-slide"><img alt="" src="main-page/2.webp" class="swiper-slide-bg">
-                  <div class="flex-cc swiper-slide-content">
-                    <div class="swiper-slide-title">experienced<span> team</span></div>
-                    <div class="flex-cc swiper-slide-sep"><img alt="" src="main-page/sep.webp"></div>
-                    <div class="swiper-slide-text">Our server is associated with quality, this is achieved by the professionalism and dedication to work from our team</div>
-                  </div>
-                </div>
-				<div class="flex-cc swiper-slide"><img alt="" src="main-page/3.jpg" class="swiper-slide-bg">
-                  <div class="flex-cc swiper-slide-content">
-                    <div class="swiper-slide-title">Choose<span> your Role</span></div>
-                    <div class="flex-cc swiper-slide-sep"><img alt="" src="main-page/sep.webp"></div>
-                    <div class="swiper-slide-text">Our server have a unique gameplay and everyone has a role ingame</div>
-                  </div>
-                </div>
-                <div class="flex-cc swiper-slide"><img alt="" src="main-page/4.webp" class="swiper-slide-bg">
-                  <div class="flex-cc swiper-slide-content">
-                    <div class="swiper-slide-title">donate<span> balance</span></div>
-                    <div class="flex-cc swiper-slide-sep"><img alt="" src="main-page/sep.webp"></div>
-                    <div class="swiper-slide-text">Donations are minimal with us and we do not have a "Pay-To-Win" system, which creates a fair environment on the server!</div>
-                  </div>
-                </div>
-                <div class="flex-cc swiper-slide"><img alt="" src="main-page/5.webp" class="swiper-slide-bg">
-                  <div class="flex-cc swiper-slide-content">
-                    <div class="swiper-slide-title">Fair<span> Gameplay</span> for Everyone</div>
-                    <div class="flex-cc swiper-slide-sep"><img alt="" src="main-page/sep.webp"></div>
-                    <div class="swiper-slide-text">Our projects are always functional & have a fair gameplay for everyone</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="flex-cc swiper-navigation">
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-pagination"></div>
-              <div class="swiper-button-next"></div>
-            </div>
+          <div class="content-area p4-features">
+            <a class="p4-feature p4-frame" href="wiki#rates">
+              <span class="p4-feature__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></span>
+              <h3>x1 Rates</h3><p>XP, SP, Adena, Drop, Spoil and Raid all x1. Vitality gives x2 XP so casual players keep up.</p></a>
+            <a class="p4-feature p4-frame" href="wiki#general">
+              <span class="p4-feature__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2l2.6 6.4L21 9l-5 4.4L17.5 21 12 17.3 6.5 21 8 13.4 3 9l6.4-.6z"/></svg></span>
+              <h3>NPC Buffer · 40 min</h3><p>20 buffs, 12 songs/dances and 12 triggered slots from the NPC Buffer. Premium extends to 90 minutes.</p></a>
+            <a class="p4-feature p4-frame" href="wiki#enchant">
+              <span class="p4-feature__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14.5 4.5l5 5L9 20H4v-5zM12 7l5 5"/></svg></span>
+              <h3>Enchant up to +30</h3><p>Normal and Blessed scrolls share the same chance. Clear tables for weapons and armor in the wiki.</p></a>
+            <a class="p4-feature p4-frame" href="wiki#premium">
+              <span class="p4-feature__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 16l-2-9 5 4 4-7 4 7 5-4-2 9zM5 20h14"/></svg></span>
+              <h3>Premium Account</h3><p>XP +50%, SP +100%, Drop chance +10%, Spoil amount +100% and auto-loot.</p></a>
+            <a class="p4-feature p4-frame" href="wiki#rules">
+              <span class="p4-feature__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></span>
+              <h3>No Dual Box</h3><p>One client per player. The anticheat blocks multi-boxing to keep the economy fair.</p></a>
+            <a class="p4-feature p4-frame" href="startgame">
+              <span class="p4-feature__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16v11H4zM8 20h8M12 16v4"/></svg></span>
+              <h3>Samurai Crow Client</h3><p>Built on the newest client: modern UI, new zones and the latest class balance.</p></a>
           </div>
         </section>
-        <section class="section information">
+
+        <!-- Epic bosses: filled from status.json; the section stays hidden without it. -->
+        <section class="section p4-bosses" data-live hidden>
           <div class="flex-cc section__title">
             <div class="section__title-left"></div>
             <div class="section__title-center">
-              <div class="section__title-center-big">SERVER BRIEF</div>
+              <div class="section__title-center-big">Epic Bosses</div>
             </div>
             <div class="section__title-right"></div>
-            <div class="section__title-small">To see more <a href="wiki"><u>click here</u></a></div>
+            <div class="section__title-small" data-status-updated></div>
           </div>
-          <div class="content-area flex-ss">
-            <div class="col-1-4"><a href="https://l2project4.com/wiki#rates">
-              <div class="information__box"><img alt="" src="main-page/6.webp" class="information__box-bg">
-                <div class="information__box-content">
-                  <div class="flex-cc information__box-icon"><img alt="" src="main-page/6.webp"></div>
-                  <div class="information__box-title">Mid rate</div>
-                  <div class="information__box-text">
-                    <p>Mid rates help the player to better show his skill & experience in the game                
-                  </div>
-                </div>
-                <div class="flex-cc information__box-button">more</div>
-              </div>
-            </div>
-            <div class="col-1-4"><a href="https://l2project4.com/wiki#rules">
-              <div class="information__box"><img alt="" src="main-page/bot.webp" class="information__box-bg">
-                <div class="information__box-content">
-                  <div class="flex-cc information__box-icon"><img alt="" src="main-page/bot2.webp"></div>
-                  <div class="information__box-title">protection</div>
-                  <div class="information__box-text">
-                    <p>The server will have both active and passive protection against all kinds of cheats. Read Rules                 </div>
-                </div>
-                <div class="flex-cc information__box-button">more</div>
-              </div>
-            </div>
-			<div class="col-1-4" ><a href="https://l2project4.com/class">
-              <div class="information__box"><img alt="" src="main-page/classes.jpg" class="information__box-bg">
-                <div class="information__box-content">
-                  <div class="flex-cc information__box-icon"><img alt="" src="main-page/classes.jpg"></div>
-                  <div class="information__box-title">Unique Skills & Gameplay</div>
-                  <div class="information__box-text">
-                    <p>Our server has unique gameplay you need to choose your path how u want to be ingame                  </div>
-                </div>
-                <div class="flex-cc information__box-button">more</div>
-              </div>
-            </div>
-			<div class="col-1-4" ><a href="https://l2project4.com/wiki#currency">
-              <div class="information__box"><img alt="" src="main-page/classes.jpg" class="information__box-bg">
-                <div class="information__box-content">
-                  <div class="flex-cc information__box-icon"><img alt="" src="main-page/cashback2.webp"></div>
-                  <div class="information__box-title">Balanced Donations</div>
-                  <div class="information__box-text">
-                    <p>Our server has Balanced Donations that has no impact in the game.                  </div>
-                </div>
-                <div class="flex-cc information__box-button">more</div>
-              </div>
-            </div>
-            
-          
+          <div class="content-area p4-bosses__grid" data-status-bosses></div>
         </section>
-       
-          
+
+        <section class="section p4-band-wrap">
+          <div class="content-area">
+            <div class="p4-band p4-frame">
+              <div class="p4-band__text">
+                <div class="p4-band__eyebrow">Gameplay</div>
+                <h2>Five races. Every class guide in one place.</h2>
+                <p>Skills, roles and recommended gear for Human, Elf, Dark Elf, Orc and Dwarf.</p>
+                <a class="p4-btn" href="class">Explore classes</a>
+              </div>
+            </div>
+          </div>
+        </section>
         		<div class="progress-wrap"><svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/></svg></div>
     <footer class="footer33">
     <div class="footer33__logo flex-cc">
@@ -284,17 +212,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 	</div>
      
-<link rel="stylesheet" href="scripts/fontawesome.css?v=202611220213" >
-<script src="scripts/jquery.min.js?v=202611220213" ></script>
-<script src="scripts/navigation.js?v=202611220213" ></script>
-<script src="scripts/timers.js?v=202611220213" ></script>
-<script src="scripts/swiper.js?v=202611220213" ></script>
-<script src="scripts/MVisionToggleClass.js?v=202611220213"></script>
-<script src="scripts/wiki.js?v=202611220213"></script>
-<script src="scripts/tablesizer.js?v=202611220213"></script>
-<script src="scripts/scripts.js?v=202611220213"></script>
-<script src="scripts/streams.js?v=202611220213"></script>
-<script src="scripts/top.js?v=202611220213"></script>
-<script src="scripts/ui.js?v=202611220213"></script>
+<link rel="stylesheet" href="scripts/fontawesome.css?v=202611221018" >
+<script src="scripts/jquery.min.js?v=202611221018" ></script>
+<script src="scripts/navigation.js?v=202611221018" ></script>
+<script src="scripts/timers.js?v=202611221018" ></script>
+<script src="scripts/MVisionToggleClass.js?v=202611221018"></script>
+<script src="scripts/wiki.js?v=202611221018"></script>
+<script src="scripts/tablesizer.js?v=202611221018"></script>
+<script src="scripts/scripts.js?v=202611221018"></script>
+<script src="scripts/streams.js?v=202611221018"></script>
+<script src="scripts/top.js?v=202611221018"></script>
+<script src="scripts/ui.js?v=202611221018"></script>
+<script src="scripts/status.js?v=202611221018"></script>
 </body>
 </html>

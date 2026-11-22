@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  new Swiper(".mySwiper", {
+  if (window.Swiper && document.querySelector(".mySwiper")) new Swiper(".mySwiper", {
     slidesPerView: 1,
     initialSlide: 1,
     spaceBetween: 40,
