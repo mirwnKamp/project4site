@@ -152,6 +152,9 @@
 .p4-nav-sentinel, .p4-nav-spacer { display: none; }
 @media (max-width: 1024px) {
     .p4-nav-sentinel, .p4-nav-spacer { display: block; width: 100%; flex: 0 0 100%; }
+    /* No clipping ancestors on phones: with overflow clip/hidden around it, iOS Safari still shook the pinned strip
+       (the Gameplay pages, where .wiki sits outside .wrapper, never did). Nothing on these pages is wider than the screen. */
+    .p4-pin .wrapper, .p4-pin .section { overflow: visible; }
     .p4-pin .wiki__nav { position: relative; top: auto; }
     .p4-pin .wiki__nav.is-pinned { position: fixed; top: 8px; z-index: 50; margin: 0; }
 }
