@@ -166,34 +166,109 @@ def items_page():
     return 'Items', tabs, STAGE_NOTE
 
 
+TREES = os.path.join(SERVER, 'dist', 'game', 'data', 'stats', 'players', 'skillTrees')
+TRANSFORMS = os.path.join(SERVER, 'dist', 'game', 'data', 'stats', 'transformations')
+NPCS = os.path.join(SERVER, 'dist', 'game', 'data', 'stats', 'npcs')
+ARCHETYPES = ['Sigel', 'Tyrr', 'Othell', 'Yul', 'Feoh', 'Iss', 'Wynn', 'Aeore']
+
+
+def class_trees():
+    """classId -> (display name, parent classId, skill ids) from the class skill trees."""
+    trees = {}
+    for f in glob.glob(os.path.join(TREES, '*', '*.xml')):
+        src = open(f, encoding='utf-8').read()
+        for st in ET.fromstring(src).iter('skillTree'):
+            if st.get('type') != 'classSkillTree':
+                continue
+            cid = st.get('classId')
+            if os.path.basename(os.path.dirname(f)) == '4rthClass':  # file names are spelled right, the comments not always
+                name = re.sub(r"(?<=[a-z'])(?=[A-Z])", ' ', os.path.basename(f)[:-4])
+            else:
+                m = re.search(r'<!--\s*([^<>]+?)\s*-->\s*<skillTree[^>]*classId="%s"' % cid, src)
+                name = m.group(1) if m else re.sub(r'\d+$', '', os.path.basename(f)[:-4])  # Warg4.xml -> Warg
+            trees[cid] = (name, st.get('parentClassId'), {sk.get('skillId') for sk in st.iter('skill')})
+    return trees
+
+
+def skill_owners(custom):
+    """Custom skill id -> {class name: how it is learned}. Final classes only, with the skills of their parent classes.
+    Also the skills of a transformation or a servitor that a class skill calls (Golem Armor, summons)."""
+    trees = class_trees()
+    parents = {p for _, p, _ in trees.values() if p}
+    owners = {}
+    for cid, (name, _, _) in trees.items():
+        if cid in parents:
+            continue
+        c, learned = cid, set()
+        while c in trees:
+            learned |= trees[c][2]
+            c = trees[c][1]
+        for sid in learned:
+            owners.setdefault(sid, {})[name] = ''
+    transforms = {}
+    for f in glob.glob(os.path.join(TRANSFORMS, '*.xml')):
+        for tr in ET.parse(f).getroot().iter('transform'):
+            transforms[tr.get('id')] = {sk.get('id') for sk in tr.iter('skill')}
+    servitors = {}
+    for f in glob.glob(os.path.join(NPCS, 'custom', '*.xml')):
+        for npc in ET.parse(f).getroot().iter('npc'):
+            servitors[npc.get('id')] = (npc.get('name'), {sk.get('id') for sk in npc.iter('skill')})
+    # Every skill a class learns (retail ones too: the summon skills) may call a transformation or a servitor.
+    calls = {}
+    for f in glob.glob(os.path.join(SKILLS, '*.xml')):
+        src = open(f, encoding='utf-8').read()
+        if '<npcId>' not in src and 'ransform' not in src:
+            continue
+        for m in re.finditer(r'<skill id="(\d+)"(.*?)</skill>', src, re.S):
+            if m.group(1) in owners and ('<npcId>' in m.group(2) or 'ransform' in m.group(2)):
+                calls[m.group(1)] = calls.get(m.group(1), '') + m.group(2)
+    for sid, xml in calls.items():
+        classes = dict(owners[sid])
+        for tid in re.findall(r'<transform(?:ation)?Id>(\d+)<', xml):
+            for sub in transforms.get(tid, ()) & set(custom):
+                for c in classes:
+                    owners.setdefault(sub, {}).setdefault(c, 'Transformation skill')
+        for nid in re.findall(r'<npcId>(\d+)<', xml):
+            sname, subs = servitors.get(nid, ('', set()))
+            for sub in subs & set(custom):
+                for c in classes:
+                    owners.setdefault(sub, {}).setdefault(c, f'Servitor skill ({sname})' if sname else 'Servitor skill')
+    return {sid: c for sid, c in owners.items() if sid in custom}
+
+
 def skills_page():
     rows = read_rows('SkillName-eu.txt', 'skill_begin')
     by_skill = {}
     for r in rows:
         by_skill.setdefault(r['skill_id'], []).append(r)
-    groups = {}  # group name -> cards; files like SamuraiNinja and SamuraiNinja2 share one tab
+    custom = {}  # id -> xml; item, system and Eigis Rare (weapon) skills are not class skills
     for f in sorted(glob.glob(os.path.join(SKILLS, 'Custom-*.xml'))):
         base = os.path.basename(f)
-        if SKILL_EXCLUDE.search(base):
+        if SKILL_EXCLUDE.search(base) or 'Eigis' in base:
             continue
-        group = re.sub(r'^Custom-|(-\d+)+\.xml$|\.xml$', '', base)
-        group = re.sub(r'Skills$|\d+$', '', group)
-        group = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', group)
-        cards = groups.setdefault(group, [])
         for sk in ET.parse(f).getroot().iter('skill'):
-            levels = by_skill.get(sk.get('id'))
-            if not levels:
-                continue
-            first = levels[0]
-            last = max(levels, key=lambda r: (int(r['skill_level']), int(r.get('skill_sublevel', 0))))
-            desc = unwrap(last.get('desc')) or unwrap(first.get('desc'))
-            params = [p for p in unwrap(last.get('desc_param')).split(';')]
-            for n, p in enumerate(params, 1):
-                desc = desc.replace(f'$s{n}', p)
-            lv = int(last['skill_level'])
-            cards.append(card(text(first.get('name')), f'Max level {lv}' if lv > 1 else '', f'<p>{text("[" + desc + "]")}</p>' if desc else ''))
-    tabs = [tab(re.sub(r'\W', '', g).lower(), html.escape(g), f'{len(c)} skills', 'Custom skills of this server.', c)
-            for g, c in groups.items() if c]
+            custom[sk.get('id')] = ET.tostring(sk, encoding='unicode')
+    by_class = {}
+    for sid, classes in skill_owners(custom).items():
+        levels = by_skill.get(sid)
+        if not levels:
+            continue
+        first = levels[0]
+        last = max(levels, key=lambda r: (int(r['skill_level']), int(r.get('skill_sublevel', 0))))
+        desc = unwrap(last.get('desc')) or unwrap(first.get('desc'))
+        for n, p in enumerate(unwrap(last.get('desc_param')).split(';'), 1):
+            desc = desc.replace(f'$s{n}', p)
+        lv = int(last['skill_level'])
+        for cname, how in classes.items():
+            sub = ' · '.join(x for x in (how, f'Max level {lv}' if lv > 1 else '') if x)
+            by_class.setdefault(cname, []).append(
+                (how, text(first.get('name')), card(text(first.get('name')), sub, f'<p>{text("[" + desc + "]")}</p>' if desc else '')))
+    order = lambda n: (next((i for i, a in enumerate(ARCHETYPES) if n.startswith(a + ' ')), len(ARCHETYPES)), n)
+    tabs = []
+    for cname in sorted(by_class, key=order):
+        cards = [c for _, _, c in sorted(by_class[cname], key=lambda x: (x[0] != '', x[0], x[1]))]
+        tabs.append(tab(re.sub(r'\W', '', cname).lower(), html.escape(cname), f'{len(cards)} new skills',
+                        f'New and reworked skills of the {html.escape(cname)}.', cards))
     return 'Skills', tabs
 
 
