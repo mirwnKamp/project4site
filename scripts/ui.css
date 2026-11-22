@@ -125,8 +125,9 @@
     .wiki__nav {
         position: sticky; top: 8px; z-index: 5; display: flex; flex-wrap: nowrap; gap: 8px;
         overflow-x: auto; overflow-y: hidden; padding: 10px; border: 1px solid var(--p4-line); border-radius: 16px;
-        background: rgba(24, 24, 24, .88); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-        box-shadow: 0 10px 24px rgba(0, 0, 0, .35);
+        /* No backdrop-filter and an own layer: iOS Safari makes a blurred sticky bar jump while its toolbar hides/shows. */
+        background: rgba(24, 24, 24, .97); box-shadow: 0 10px 24px rgba(0, 0, 0, .35);
+        -webkit-transform: translateZ(0); transform: translateZ(0); will-change: transform;
         scroll-snap-type: x proximity; scrollbar-width: none; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
     }
     .wiki__nav::-webkit-scrollbar { display: none; }
@@ -358,7 +359,7 @@ body.body { color: var(--p4-text); font-family: var(--p4-sans); }
 .table__tr:nth-child(even) { background: rgba(255, 255, 255, .025); }
 .table__td { border-color: rgba(212, 168, 90, .1); }
 @media (max-width: 1024px) {
-    .wiki__nav { background: rgba(15, 18, 26, .9); }
+    .wiki__nav { background: rgba(15, 18, 26, .97); }
     .wiki__nav-item, .wiki__nav-item:last-child { border: 1px solid rgba(212, 168, 90, .3); border-radius: 999px; }
     .wiki__nav-item:hover { background: var(--p4-pill); }
     .wiki__nav-item.active { background: var(--p4-pill-active); border-color: transparent; }
