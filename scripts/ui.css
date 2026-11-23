@@ -1,6 +1,6 @@
 /* Project4 UI layer: shared look, motion and phone layout for every page.
    Loaded after main.css; keep site-wide visual changes here instead of editing main.css. */
-/* Samurai Crow look: obsidian panels, thin gold frames, Cinzel headings, Inter text (fonts/ is self-hosted). */
+/* Project4 look: obsidian panels, thin gold frames, Cinzel headings, Inter text (fonts/ is self-hosted). */
 :root {
     --p4-accent: #d4a85a;
     --p4-accent-2: #a87a35;
@@ -300,7 +300,7 @@
     .progress-wrap { right: 16px; bottom: 16px; }
 }
 
-/* ---------- Samurai Crow theme (all pages) ---------- */
+/* ---------- Project4 theme (all pages) ---------- */
 html, body.body { background: var(--p4-bg); }
 body.body { color: var(--p4-text); font-family: var(--p4-sans); }
 .wrapper:after { display: none; } /* grey side fades of the old layout */

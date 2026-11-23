@@ -1,4 +1,4 @@
-"""Generate items.html and the Gameplay race pages (class.html, elf.html, ...) from the Samurai Crow server datapack.
+"""Generate items.html and the Gameplay race pages (class.html, elf.html, ...) from the server datapack.
 
 Usage: python tools/generate.py [path/to/L2J_Mobius_14.1_SamuraiCrow]
 Default server path: ../L2J_Mobius_14.1_SamuraiCrow (next to this repo).

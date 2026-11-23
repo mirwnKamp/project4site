@@ -97,7 +97,7 @@ class Client:
 
     def largest_mip(self, key):
         """(offset, size) of the biggest DXT1 mip of a texture. Older icons have one mip at the end of the export
-        (what iconpatch.pixels reads); the Samurai Crow ones (s_*) carry mipmaps 64 -> 1, so look for each size's
+        (what iconpatch.pixels reads); the newer ones (s_*) carry mipmaps 64 -> 1, so look for each size's
         footer (USize, VSize, UBits, VBits) with its DXT1 data length in front of the data."""
         off, size = self.textures[key]
         for w in (128, 64, 32, 16):
